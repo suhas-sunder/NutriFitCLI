@@ -18,3 +18,7 @@ it does not have to be an object-oriented application, but it cannot be a single
 
 Details:
 What: The project idea is to make a meal and exercise tracker that displays information on food and calories consumed and includes a list of activates done on any given day if information has been logged. Why: The idea seems complex enough to incorporate a lot of elements we explored in class, and would make for a great addition to my portfolio. Additionally, this is an idea/application I have not explored before, so I am eager to learn something new. How: I intend to provide a list of options for the user to choose from in the CLI. Depending on what the user selects, they can either log or view information. Each tracker will be handled in a separate file. I plan to store the collected information in either JSON or CSV format depending on whichever seems suitable. Ideally, I would like to use a calendar module or library to manage the days. If time permits, I would also like to try and find a simple API that I can implement for basic calorie information. If not, I will generate a list of food items and their nutrition info to simulate an API call. My goal is to apply as much of the knowledge I have gained in class for this project in order to deepen my understanding of the fundamentals. 
+
+Due dates: Project title & idea: March 7 (2%)
+Presentation & demo: April 1 (10%)
+Readme & documented code: April 1 (8%)
