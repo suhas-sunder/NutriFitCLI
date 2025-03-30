@@ -4,7 +4,6 @@
 #  Date: March 28, 2025
 #  Title: NutriFitCLI (NutriFit Command Line Interface)
 #  Description: Handles all logic with applying colours and formatting to displayed text
-
 import json
 
 # Load ANSI color codes from a JSON file
