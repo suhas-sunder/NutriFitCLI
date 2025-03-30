@@ -1,3 +1,9 @@
+#  Copyright 2025
+#  Authors: Suhas Sunder - 100548159
+#  Date: March 28, 2025
+#  Title: NutriFitCLI (NutriFit Command Line Interface)
+#  Description: Handles all logic with adding and removing meal logs
+
 import json
 
 # Load ANSI color codes from a JSON file
@@ -29,20 +35,27 @@ class MealTracker:
            
   def log_food_to_json(self, food_data):     
     try:
-      # Save the food data to a JSON file
+      # Get existing data from the JSON file
+      with open(self.file_path, 'r') as file:
+            existing_data = json.load(file)
+      
+      existing_data.append(food_data) # Add the new food data
+            
+      # Save the updated food data to a JSON file
       with open(self.file_path, 'w') as file:
-        json.dump(food_data, file, indent=2)  
+        json.dump(existing_data, file, indent=2)  
     except FileNotFoundError:
       # If the file doesn't exist, create it
       with open(self.file_path, 'w') as file:
-        json.dump([], file, indent=2)
+        json.dump([food_data], file, indent=2)
                
   def food_search(self, entered_food):        
     matching_foods = []
     
     for food in list_of_foods:
-      if entered_food.lower() in food["food_name"].lower():  # Partial match, case-insensitive
-          matching_foods.append(food)
+      # Check if the entered food name is a substring of the food name
+      if entered_food.lower() in food["food_name"].lower():  
+        matching_foods.append(food)
     
     return matching_foods
   
@@ -94,14 +107,12 @@ class MealTracker:
             for index, food in enumerate(nutrition_data):
                 print(f"{index + 1}. {food["food_name"]} | Calories per serving: {food['calories_per_serving']} | Grams per serving: {food['grams_per_serving']}", )
                                 
-                try:
-                  # Select the food by entering its number.
-                  food_selected = input("Select the food by entering its number: ")
-                  self.get_serving_size(nutrition_data, food_selected, selftarget_year, target_month, target_day)    
-                  break                                
-                 
-                except ValueError:
-                  print(color_text("Invalid input! Please enter a number.", "BRIGHT_RED"))                
+            try:
+              # Select the food by entering its number.
+              food_selected = input("Select the food by entering its number: ")
+              self.get_serving_size(nutrition_data, food_selected, selftarget_year, target_month, target_day)             
+            except ValueError:
+              print(color_text("Invalid input! Please enter a number.", "BRIGHT_RED"))                
     return 0
   
   def log_meal(self):

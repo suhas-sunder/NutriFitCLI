@@ -5,9 +5,49 @@
     "grams_per_serving": 182
   },
   {
+    "food_name": "Applesauce",
+    "calories_per_serving": 100,
+    "grams_per_serving": 244
+  },
+  {
+    "food_name": "Apricot",
+    "calories_per_serving": 17,
+    "grams_per_serving": 35
+  },
+  {
+    "food_name": "Apple Pie",
+    "calories_per_serving": 296,
+    "grams_per_serving": 125
+  },
+  {
+    "food_name": "Apple Cider",
+    "calories_per_serving": 120,
+    "grams_per_serving": 240
+  },
+  {
     "food_name": "Banana",
     "calories_per_serving": 105,
     "grams_per_serving": 118
+  },
+  {
+    "food_name": "Bacon",
+    "calories_per_serving": 42,
+    "grams_per_serving": 10
+  },
+  {
+    "food_name": "Basil",
+    "calories_per_serving": 1,
+    "grams_per_serving": 2
+  },
+  {
+    "food_name": "Bagel",
+    "calories_per_serving": 289,
+    "grams_per_serving": 105
+  },
+  {
+    "food_name": "Barley",
+    "calories_per_serving": 193,
+    "grams_per_serving": 157
   },
   {
     "food_name": "Carrot",
@@ -15,14 +55,74 @@
     "grams_per_serving": 61
   },
   {
+    "food_name": "Cabbage",
+    "calories_per_serving": 22,
+    "grams_per_serving": 89
+  },
+  {
+    "food_name": "Cauliflower",
+    "calories_per_serving": 25,
+    "grams_per_serving": 100
+  },
+  {
+    "food_name": "Cashews",
+    "calories_per_serving": 157,
+    "grams_per_serving": 28
+  },
+  {
+    "food_name": "Capers",
+    "calories_per_serving": 2,
+    "grams_per_serving": 8
+  },
+  {
     "food_name": "Broccoli",
     "calories_per_serving": 55,
     "grams_per_serving": 156
   },
   {
+    "food_name": "Brussels Sprouts",
+    "calories_per_serving": 38,
+    "grams_per_serving": 88
+  },
+  {
+    "food_name": "Bread",
+    "calories_per_serving": 79,
+    "grams_per_serving": 30
+  },
+  {
+    "food_name": "Brown Rice",
+    "calories_per_serving": 216,
+    "grams_per_serving": 195
+  },
+  {
+    "food_name": "Brie Cheese",
+    "calories_per_serving": 100,
+    "grams_per_serving": 28
+  },
+  {
     "food_name": "Chicken Breast",
     "calories_per_serving": 165,
     "grams_per_serving": 174
+  },
+  {
+    "food_name": "Cheddar Cheese",
+    "calories_per_serving": 113,
+    "grams_per_serving": 28
+  },
+  {
+    "food_name": "Chocolate",
+    "calories_per_serving": 208,
+    "grams_per_serving": 44
+  },
+  {
+    "food_name": "Chickpeas",
+    "calories_per_serving": 269,
+    "grams_per_serving": 164
+  },
+  {
+    "food_name": "Chia Seeds",
+    "calories_per_serving": 138,
+    "grams_per_serving": 28
   },
   {
     "food_name": "Egg",
