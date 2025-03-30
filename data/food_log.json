@@ -12,5 +12,12 @@
     "calories": 76,
     "grams": 176,
     "serving_size": 2
+  },
+  {
+    "date": "2020-10-10",
+    "name": "Brussels Sprouts",
+    "calories": 760,
+    "grams": 1760,
+    "serving_size": 20
   }
 ]
