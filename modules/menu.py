@@ -1,9 +1,14 @@
+#  Copyright 2025
+#  Authors: Suhas Sunder - 100548159
+#  Date: March 28, 2025
+#  Title: NutriFitCLI (NutriFit Command Line Interface)
+#  Description: Handles all menu UI
 
 import os
 from colour_sequence import color_text
 from modules.meal_tracker import MealTracker
 from modules.exercise_tracker import ExerciseTracker
-from modules.calendar_events import CalendarEvents
+from Z_FINAL_PROJ.NutriFitCLI.modules.data_query import CalendarEvents
 
 class MainMenu:
   def __init__(self):
