@@ -19,8 +19,6 @@ class MealTracker:
     self.file_path = "data/food_log.json"
     
   def log_meal(self):
-    os.system('cls' if os.name == 'nt' else 'clear')  # Clear the console
-    
     target_year, target_month, target_day, exit_flag = QueryData().get_date()  
     
     # Return to main menu
@@ -124,8 +122,66 @@ class MealTracker:
     except Exception as e:
         print(f"Uexpected Error: Unable to write to {self.file_path} - {e}")
         
-    def delete_meal(self, target_year, target_month, target_day):
-      pass
+  def delete_meal(self, meal_selected):
+    try:
+      # Read the existing data from the JSON file
+      with open(self.file_path, 'r') as file:
+            data = json.load(file) 
+
+      # Delete the selected exercise from the data
+      if meal_selected in data:
+          data.remove(meal_selected)
+
+      # Save the updated data to the JSON file
+      with open(self.file_path, 'w') as file:
+          json.dump(data, file, indent=2)
+      
+      os.system('cls' if os.name == 'nt' else 'clear')  # Clear the console
+      print("")
+      print(color_text("Meal successfully deleted!", "BRIGHT_GREEN", True))   
+      print("")      
+      
+    except FileNotFoundError:
+      print(color_text("Error: data_log.json file not found.", "BRIGHT_RED", True))
+    except PermissionError:
+      print(color_text(f"Error: Unable to write to {self.file_path} - permission denied.", "BRIGHT_RED", True))
+    except Exception as e:
+      print(color_text(f"Unexpected error: {e}", "BRIGHT_RED", True))
+    
+  def remove_meal(self):
+    target_year, target_month, target_day, exit_flag = QueryData().get_date()  
+    
+    # Return to main menu
+    if(exit_flag):
+      return 0
+      
+    while True:
+      meals_logged = QueryData().meals_by_date(target_year, target_month, target_day)
+      
+      if(len(meals_logged) == 0):
+        # Display message if no meals logged
+        print(color_text("No meals logged for selected date!", "BRIGHT_YELLOW", True))
+        print("")
+        input(f"Press {color_text('any key', 'BRIGHT_YELLOW', True)} to return to {color_text("MAIN MENU...", "BRIGHT_YELLOW", True)}")
+        return 0 # Return to main menu
+      
+      exercise_selected = input(f"Enter the {color_text('#', 'BRIGHT_YELLOW', True)} to {color_text('delete', 'BRIGHT_YELLOW', True)} the log" + " ~ (or " + color_text("'menu'", "BRIGHT_YELLOW", True) + " for " + color_text("MAIN MENU", "BRIGHT_YELLOW", True) + "): ").strip()
+      
+      if(exercise_selected == 'menu'):
+        return 0 # Return to main menu
+         
+      try:
+        if int(exercise_selected) in range(1, len(meals_logged) + 1):          
+          self.delete_meal(meals_logged[int(exercise_selected) - 1])         
+          user_input = input(f"Press {color_text('any key', 'BRIGHT_YELLOW', True)} to delete more" + " ~ (or " + color_text("'menu'", "BRIGHT_YELLOW", True) + " for " + color_text("MAIN MENU", "BRIGHT_YELLOW", True) + "): ")
+          if(user_input == 'menu'):
+            return 0          
+        else:
+          print(color_text("Invalid selection! Please enter a valid number.", "BRIGHT_RED", True))
+      except ValueError:
+        print(color_text("Invalid input! Please enter a number.", "BRIGHT_RED", True))
+      
+ 
            
   
   

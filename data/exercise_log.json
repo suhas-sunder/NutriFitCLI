@@ -1,12 +1,6 @@
 [
   {
     "date": "2020-10-10",
-    "name": "Running (6 mph)",
-    "calories_burned": 200,
-    "minutes_exercised": 20
-  },
-  {
-    "date": "2020-10-10",
     "name": "Bodyweight Exercises",
     "calories_burned": 360,
     "minutes_exercised": 60
@@ -16,17 +10,5 @@
     "name": "Running (6 mph)",
     "calories_burned": 600,
     "minutes_exercised": 60
-  },
-  {
-    "date": "2020-10-10",
-    "name": "Lunges",
-    "calories_burned": 720,
-    "minutes_exercised": 120
-  },
-  {
-    "date": "2020-10-10",
-    "name": "Running (6 mph)",
-    "calories_burned": 200,
-    "minutes_exercised": 20
   }
 ]
