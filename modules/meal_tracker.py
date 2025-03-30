@@ -2,7 +2,7 @@
 #  Authors: Suhas Sunder - 100548159
 #  Date: March 28, 2025
 #  Title: NutriFitCLI (NutriFit Command Line Interface)
-#  Description: Handles all logic with adding and removing meal logs
+#  Description: Handles all logic with adding and removing meal logs.
 
 import json # Importing json module
 
@@ -11,7 +11,7 @@ with open('data/list_of_foods.json') as file:
     list_of_foods = json.load(file) 
   
 import os # Importing os module
-from datetime import datetime
+from data_query import QueryData
 from colour_sequence import color_text
 
 class MealTracker:
@@ -20,7 +20,14 @@ class MealTracker:
     
   def log_meal(self):
     os.system('cls' if os.name == 'nt' else 'clear')  # Clear the console
-    target_year, target_month, target_day = self.get_date()    
+    
+    target_year, target_month, target_day, exit_flag = QueryData().get_date()  
+    
+    # Return to main menu
+    if(exit_flag):
+      return 0
+    
+    # Store the meal after getting the date
     return self.store_meal(target_year, target_month, target_day)
   
   def store_meal(self, target_year, target_month, target_day):
@@ -29,7 +36,7 @@ class MealTracker:
     while keep_logging_meals:
         # Prompt the user to enter a food name
         print("")
-        entered_food = input("Enter " + color_text("food name", "BRIGHT_YELLOW", True)  + " (or " + color_text("'menu'", "BRIGHT_YELLOW", True) + " for " + color_text("MAIN MENU", "BRIGHT_YELLOW", True) + "): ")          
+        entered_food = input("Enter " + color_text("food name", "BRIGHT_YELLOW", True)  + " ~ (or " + color_text("'menu'", "BRIGHT_YELLOW", True) + " for " + color_text("MAIN MENU", "BRIGHT_YELLOW", True) + "): ")          
         if(entered_food.lower() == "menu"):
             break
         
@@ -65,20 +72,7 @@ class MealTracker:
       if entered_food.lower() in food["food_name"].lower():  
         matching_foods.append(food)
     
-    return matching_foods
-  
-  def get_date(self):
-    while True:
-        entered_date = input("Enter the " + color_text("date ", "BRIGHT_YELLOW", True) + "(" + color_text("YYYY", "BRIGHT_YELLOW", True) + "-" + color_text("MM", "BRIGHT_YELLOW", True) + "-" + color_text("DD", "BRIGHT_YELLOW", True) + "): ")
-        
-        try:
-            correct_date = datetime.strptime(entered_date, "%Y-%m-%d")
-            return correct_date.year, correct_date.month, correct_date.day
-        except ValueError:
-           print("")
-           # If the date is not correct, display an error message
-           print(color_text("Invalid date! Please enter the date in YYYY-MM-DD format.", "BRIGHT_RED", True)) 
-           print("")
+    return matching_foods         
   
   def get_serving_size(self, nutrition_data, food_selected, target_year, target_month, target_day):
     try:
@@ -101,7 +95,7 @@ class MealTracker:
           "serving_size": serving_size,
         } 
          
-        self.log_food_to_json(food_data)
+        self.log_food_to_json(food_data) # Log the food to a JSON file
         
         os.system('cls' if os.name == 'nt' else 'clear')  # Clear the console         
         print(f"Food {color_text("successfully", "BRIGHT_GREEN", True)} logged: {color_text(selected_food['food_name'], 'BRIGHT_ORANGE', True)} | Serving size: {color_text(serving_size, 'BRIGHT_PURPLE', True)} | Calories: {color_text(calories, 'BRIGHT_PINK', True)} | Grams: {color_text(grams, 'BRIGHT_CYAN', True)}")        
@@ -109,8 +103,7 @@ class MealTracker:
         print(color_text("Invalid selection! Please enter a valid number.", "BRIGHT_RED", True))
     except ValueError:
       print(color_text("Invalid input! Please enter a number.", "BRIGHT_RED", True))
-                 
-    
+                     
   def log_food_to_json(self, food_data):     
     try:
       # Get existing data from the JSON file
@@ -126,7 +119,13 @@ class MealTracker:
       # If the file doesn't exist, create it
       with open(self.file_path, 'w') as file:
         json.dump([food_data], file, indent=2)
-  
+    except PermissionError:
+      print(f"Error: Unable to write to {self.file_path} - permission denied.")
+    except Exception as e:
+        print(f"Uexpected Error: Unable to write to {self.file_path} - {e}")
+        
+    def delete_meal(self, target_year, target_month, target_day):
+      pass
            
   
   

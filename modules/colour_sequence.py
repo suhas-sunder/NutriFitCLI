@@ -4,7 +4,8 @@
 #  Date: March 28, 2025
 #  Title: NutriFitCLI (NutriFit Command Line Interface)
 #  Description: Handles all logic with applying colours and formatting to displayed text
-import json
+
+import json # Importing json module
 
 # Load ANSI color codes from a JSON file
 with open('data/ansi_colours.json') as file:
@@ -26,10 +27,5 @@ def color_text(text, colour, bold=False, underline=False):
 
     if bold:
         bold_code += format_ansi(ANSI_COLORS.get("BOLD"))        
-              
-                                               
-    return f"{starting_colour_code}{underline_code}{bold_code}{text}{reset_code}"
-
-
-
-  
+                                                             
+    return f"{starting_colour_code}{underline_code}{bold_code}{text}{reset_code}"  

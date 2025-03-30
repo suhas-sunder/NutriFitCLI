@@ -12,8 +12,8 @@ with open('data/list_of_exercises.json') as file:
     list_of_exercises = json.load(file) 
   
 import os # Importing os module
-from datetime import datetime
 from colour_sequence import color_text
+from data_query import QueryData
 
 class ExerciseTracker:
   def __init__(self):
@@ -21,7 +21,13 @@ class ExerciseTracker:
     
   def log_exercise(self):
     os.system('cls' if os.name == 'nt' else 'clear')  # Clear the console
-    target_year, target_month, target_day = self.get_date()    
+    
+    target_year, target_month, target_day, exit_flag = QueryData().get_date()  
+    
+    # Return to main menu
+    if(exit_flag):
+      return 0
+    
     return self.store_workout(target_year, target_month, target_day)
   
   def store_workout(self, target_year, target_month, target_day):
@@ -30,7 +36,7 @@ class ExerciseTracker:
     while keep_logging_workouts:
         # Prompt the user to enter a food name
         print("")
-        entered_workout = input("Enter " + color_text("exercise name", "BRIGHT_YELLOW", True)  + " (or " + color_text("'menu'", "BRIGHT_YELLOW", True) + " for " + color_text("MAIN MENU", "BRIGHT_YELLOW", True) + "): ")          
+        entered_workout = input("Enter " + color_text("exercise name", "BRIGHT_YELLOW", True)  + " ~ (or " + color_text("'menu'", "BRIGHT_YELLOW", True) + " for " + color_text("MAIN MENU", "BRIGHT_YELLOW", True) + "): ")          
         if(entered_workout.lower() == "menu"):
             break
         
@@ -47,7 +53,7 @@ class ExerciseTracker:
                             
             # Prompt the user to select a exercise from the list
             print("")
-            exercise_selected = input("Enter" + color_text(" exercise", "BRIGHT_YELLOW", True) + " by " + color_text("#", "BRIGHT_YELLOW", True) + " (or " + color_text("'menu'", "BRIGHT_YELLOW", True) + " for " + color_text("MAIN MENU", "BRIGHT_YELLOW", True) + "): ")
+            exercise_selected = input("Enter" + color_text(" exercise", "BRIGHT_YELLOW", True) + " by " + color_text("#", "BRIGHT_YELLOW", True) + " ~ (or " + color_text("'menu'", "BRIGHT_YELLOW", True) + " for " + color_text("MAIN MENU", "BRIGHT_YELLOW", True) + "): ")
                         
             if(exercise_selected == 'menu'):
               break
@@ -68,20 +74,7 @@ class ExerciseTracker:
         matching_exercises.append(exercise)
     
     return matching_exercises
-  
-  def get_date(self):
-    while True:
-        entered_date = input("Enter the " + color_text("date ", "BRIGHT_YELLOW", True) + "(" + color_text("YYYY", "BRIGHT_YELLOW", True) + "-" + color_text("MM", "BRIGHT_YELLOW", True) + "-" + color_text("DD", "BRIGHT_YELLOW", True) + "): ")
-        
-        try:
-            correct_date = datetime.strptime(entered_date, "%Y-%m-%d")
-            return correct_date.year, correct_date.month, correct_date.day
-        except ValueError:
-           print("")
-           # If the date is not correct, display an error message
-           print(color_text("Invalid date! Please enter the date in YYYY-MM-DD format.", "BRIGHT_RED", True)) 
-           print("")
-  
+    
   def get_minutes_exercised(self, workout_data, exercise_selected, target_year, target_month, target_day):
     try:
       if(int(exercise_selected) in range(1, len(workout_data) + 1)):
@@ -100,7 +93,7 @@ class ExerciseTracker:
           "minutes_exercised": minutes_exercised,
         } 
          
-        self.log_exercise_to_json(exercise_data)
+        self.log_exercise_to_json(exercise_data) # Log the exercise to a JSON file
         
         os.system('cls' if os.name == 'nt' else 'clear')  # Clear the console         
         print(f"exercise {color_text("successfully", "BRIGHT_GREEN", True)} logged: {color_text(selected_exercise['exercise_name'], 'BRIGHT_ORANGE', True)} | Minutes Exercised: {color_text(minutes_exercised, 'BRIGHT_PURPLE', True)} | Calories Burned: {color_text(calories_burned, 'BRIGHT_PINK', True)}")        
@@ -125,5 +118,11 @@ class ExerciseTracker:
     except FileNotFoundError:
       # If the file doesn't exist, create it
       with open(self.file_path, 'w') as file:
-        json.dump([exercise_data], file, indent=2)
-  
+        json.dump([exercise_data], file, indent=2)  
+    except PermissionError:
+      print(f"Error: Unable to write to {self.file_path} - permission denied.")
+    except Exception as e:
+        print(f"Uexpected Error: Unable to write to {self.file_path} - {e}")
+        
+    def delete_exercise(self, target_year, target_month, target_day):
+      pass
