@@ -7,6 +7,7 @@
 import os
 from colour_sequence import color_text
 from modules.meal_tracker import MealTracker
+from modules.exercise_tracker import ExerciseTracker
 
 class MainMenu:
   def __init__(self):
@@ -70,11 +71,13 @@ class MainMenu:
             
   # Display the food log menu
   def meal_log_menu(self):
+    # Display the food log menu
     menu_color = "CYAN"
     self.display_header("🍜 ", "Calorie", menu_color, "        ") 
     menu_items = ["Add Meal             ", "Remove Meal            ", "Main Menu           ", "Exit                    "]
     menu_selection = self.get_menu_input(menu_items, menu_color)  
     
+    # Handle menu selection
     if(menu_selection == 1):   
       return MealTracker().log_meal()
     elif(menu_selection == 2):
@@ -82,72 +85,68 @@ class MainMenu:
     else:
       return self.exit_to_main_menu(menu_selection)
     
-  # Display the exercise log menu
   def exercise_log_menu(self):
+    # Display the exercise log menu
     menu_color = "ORANGE"
     self.display_header("👟 ", "Exercise", menu_color, "        ") 
     
     menu_items = ["Add Exercise             ", "Remove Exercise            ", "Main Menu           ", "Exit                    "]
     menu_selection = self.get_menu_input(menu_items, menu_color)  
     
+    # Handle menu selection
     if(menu_selection == 1):
-      print("Add Exercise")
+      return ExerciseTracker().log_exercise()
     elif(menu_selection == 2):
       print("Remove Exercise")    
     else:
       return self.exit_to_main_menu(menu_selection)
     
-  # Display the food log menu
-  def daily_progress_menu(self):
-    menu_color = "GREEN"
-    self.display_header("🍜 ", "Daily Progress", menu_color, "        ")    
-    menu_items = ["Calorie Log            ", "Exercise Log            ", "Main Menu           ", "Exit                    "]
-    menu_selection = self.get_menu_input(menu_items, menu_color)    
-    
-    if(menu_selection == 1):
-      print("Add Exercise")
-    elif(menu_selection == 2):
-      print("Remove Exercise")    
-    else:
-      return self.exit_to_main_menu(menu_selection)
-    
-  # Display the exercise log menu
-  def weekly_progress_menu(self):
+  def search_by_date(self):
+    # Display the search by date menu
     menu_color = "PURPLE"
     self.display_header("👟 ", "Weekly Progress", menu_color, "        ")     
     menu_items = ["Calorie Log            ", "Exercise Log            ", "Main Menu           ", "Exit                    "]
     menu_selection = self.get_menu_input(menu_items, menu_color)    
     
     if(menu_selection == 1):
-      print("Add Exercise")
+      print("Only Meals")
     elif(menu_selection == 2):
-      print("Remove Exercise")    
+      print("Only Exercises")   
+    elif(menu_selection == 3):
+      print("Meals and Exercises") 
     else:
       return self.exit_to_main_menu(menu_selection)
     
-  def monthly_progress_menu(self):
+  # Display the activity calendar
+  def monthly_activity_calendar(self):
+    # Display the activity calendar menu
+    menu_color = "GREEN"
+    self.display_header("🍜 ", "Daily Progress", menu_color, "        ")    
+    menu_items = ["Calorie Log            ", "Exercise Log            ", "Main Menu           ", "Exit                    "]
+    menu_selection = self.get_menu_input(menu_items, menu_color)    
+    
+    # Handle menu selection
+    if(menu_selection == 1):
+      print("Only Meals")
+    elif(menu_selection == 2):
+      print("Only Exercises")  
+    elif(menu_selection == 3):
+      print("Meals and Exercises") 
+    else:
+      return self.exit_to_main_menu(menu_selection)
+         
+  def total_calories_burned(self):
+    # Display the total calories burned menu
     menu_color = "PINK"
-    self.display_header("👟 ", "Monthly Progress", menu_color, "        ") 
-    
+    self.display_header("👟 ", "Monthly Progress", menu_color, "        ")     
     menu_items = ["Calorie Log            ", "Exercise Log            ", "Main Menu           ", "Exit                    "]
     menu_selection = self.get_menu_input(menu_items, menu_color)    
     
+    # Handle menu selection
     if(menu_selection == 1):
-      print("Add Exercise")
+      print("Daily Progress")
     elif(menu_selection == 2):
-      print("Remove Exercise")    
+      print("Monthly Progress")    
     else:
       return self.exit_to_main_menu(menu_selection)
     
-  def yearly_progress_menu(self):
-    menu_color = "TURQUOISE"
-    self.display_header("👟 ", "Yearly Progress", menu_color, "        ")     
-    menu_items = ["Calorie Log            ", "Exercise Log            ", "Main Menu           ", "Exit                    "]
-    menu_selection = self.get_menu_input(menu_items, menu_color)    
-    
-    if(menu_selection == 1):
-      print("Add Exercise")
-    elif(menu_selection == 2):
-      print("Remove Exercise")    
-    else:
-      return self.exit_to_main_menu(menu_selection)
