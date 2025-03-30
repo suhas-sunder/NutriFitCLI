@@ -14,8 +14,6 @@ from modules.menu import MainMenu
 from modules.colour_sequence import color_text
 
 def main():
-    # Initialize the main menu object
-    main_menu = MainMenu()    
     menu_choice = 0
 
     # Main menu loop to keep the program running until the user exits
@@ -23,17 +21,17 @@ def main():
         # Display an appropriate menu based on the user's choice
         match menu_choice:
             case 0:
-                menu_choice = main_menu.default_menu()
+                menu_choice = MainMenu().default_menu()
             case 1:
-                menu_choice = main_menu.meal_log_menu()
+                menu_choice = MainMenu().meal_log_menu()
             case 2:
-                menu_choice = main_menu.exercise_log_menu()
+                menu_choice = MainMenu().exercise_log_menu()
             case 3:
-                menu_choice = main_menu.search_by_date()
+                menu_choice = MainMenu().search_by_date()
             case 4:
-                menu_choice = main_menu.monthly_activity_calendar()
+                menu_choice = MainMenu().monthly_activity_calendar()
             case 5:
-                menu_choice = main_menu.total_calories_burned()
+                menu_choice = MainMenu().total_calories_burned()
             case 6:
                 # Display the exit message
                 os.system('cls' if os.name == 'nt' else 'clear')  # Clear the console

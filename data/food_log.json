@@ -82,5 +82,12 @@
     "calories": 1600,
     "grams": 560,
     "serving_size": 20
+  },
+  {
+    "date": "2020-10-10",
+    "name": "Fried Chicken (2 pieces)",
+    "calories": 800,
+    "grams": 300,
+    "serving_size": 2
   }
 ]

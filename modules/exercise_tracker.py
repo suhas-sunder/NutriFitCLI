@@ -12,8 +12,8 @@ with open('data/list_of_exercises.json') as file:
     list_of_exercises = json.load(file) 
   
 import os # Importing os module
-from datetime import datetime
 from colour_sequence import color_text
+from data_query import QueryData
 
 class ExerciseTracker:
   def __init__(self):
@@ -22,7 +22,7 @@ class ExerciseTracker:
   def log_exercise(self):
     os.system('cls' if os.name == 'nt' else 'clear')  # Clear the console
     
-    target_year, target_month, target_day, exit_flag = self.get_date()  
+    target_year, target_month, target_day, exit_flag = QueryData().get_date()  
     
     # Return to main menu
     if(exit_flag):
@@ -74,24 +74,7 @@ class ExerciseTracker:
         matching_exercises.append(exercise)
     
     return matching_exercises
-  
-  def get_date(self):
-    while True:
-        entered_date = input("Enter the " + color_text("date ", "BRIGHT_YELLOW", True) + "(" + color_text("YYYY", "BRIGHT_YELLOW", True) + "-" + color_text("MM", "BRIGHT_YELLOW", True) + "-" + color_text("DD", "BRIGHT_YELLOW", True) + ") ~ (or " + color_text("'menu'", "BRIGHT_YELLOW", True) + " for " + color_text("MAIN MENU", "BRIGHT_YELLOW", True) + "): ")          
-        if(entered_date.lower() == "menu"):
-          # Return to main menu (exit_flag = True)
-          return 0, 0, 0, True       
-                      
-        try:
-            # Try to convert the entered date to a datetime object
-            correct_date = datetime.strptime(entered_date, "%Y-%m-%d")
-            return correct_date.year, correct_date.month, correct_date.day, False
-        except ValueError:
-           print("")
-           # If the date is not correct, display an error message
-           print(color_text("Invalid date! Please enter the date in YYYY-MM-DD format.", "BRIGHT_RED", True)) 
-           print("")
-  
+    
   def get_minutes_exercised(self, workout_data, exercise_selected, target_year, target_month, target_day):
     try:
       if(int(exercise_selected) in range(1, len(workout_data) + 1)):
