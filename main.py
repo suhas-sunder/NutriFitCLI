@@ -34,14 +34,12 @@ def main():
         elif(menu_choice == 5):
             menu_choice = main_menu.monthly_progress_menu()
         elif(menu_choice == 6):
-            menu_choice = main_menu.yearly_progress_menu()
-        elif(menu_choice == 7):
             # Exit the program
             os.system('cls' if os.name == 'nt' else 'clear')  # Clear the console
             print("")
             print("")
             print("")
-            print(color_text("| 🎊 | Thank you for using", "BRIGHT_PURPLE"), color_text("NutriFitCLI", "BRIGHT_YELLOW", True) + color_text(". Goodbye! | 🎊 |", "BRIGHT_PURPLE"))
+            print(color_text("| 🎊 | Thank you for using", "BRIGHT_PURPLE", True), color_text("NutriFitCLI", "BRIGHT_YELLOW", True) + color_text(". Goodbye! | 🎊 |", "BRIGHT_PURPLE", True))
             print("")
             print("")
             print("")

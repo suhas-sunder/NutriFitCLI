@@ -22,7 +22,7 @@ class MealTracker:
   
   def get_date(self):
     while True:
-        entered_date = input("Enter the " + color_text("date ", "BRIGHT_YELLOW") + "(" + color_text("YYYY", "BRIGHT_YELLOW") + "-" + color_text("MM", "BRIGHT_YELLOW") + "-" + color_text("DD", "BRIGHT_YELLOW") + "): ")
+        entered_date = input("Enter the " + color_text("date ", "BRIGHT_YELLOW", True) + "(" + color_text("YYYY", "BRIGHT_YELLOW", True) + "-" + color_text("MM", "BRIGHT_YELLOW", True) + "-" + color_text("DD", "BRIGHT_YELLOW", True) + "): ")
         
         try:
             correct_date = datetime.strptime(entered_date, "%Y-%m-%d")
@@ -30,7 +30,7 @@ class MealTracker:
         except ValueError:
            print("")
            # If the date is not correct, display an error message
-           print(color_text("Invalid date! Please enter the date in YYYY-MM-DD format.", "BRIGHT_RED")) 
+           print(color_text("Invalid date! Please enter the date in YYYY-MM-DD format.", "BRIGHT_RED", True)) 
            print("")
            
   def log_food_to_json(self, food_data):     
@@ -63,7 +63,7 @@ class MealTracker:
     try:
       if(int(food_selected) in range(1, len(nutrition_data) + 1)):
         print("")
-        serving_size = input("Please input the serving size: ")
+        serving_size = input(f"Please enter a {color_text('#', 'BRIGHT_YELLOW', True)} for the {color_text("serving size", "BRIGHT_YELLOW", True)}: ")
         # Calculate the calories and grams based on the serving size entered
         selected_food = nutrition_data[int(food_selected) - 1]
         serving_size = int(serving_size)
@@ -82,11 +82,11 @@ class MealTracker:
         self.log_food_to_json(food_data)
         
         os.system('cls' if os.name == 'nt' else 'clear')  # Clear the console         
-        print(f"Food {color_text("successfully", "BRIGHT_GREEN", true)} logged: {color_text(selected_food['food_name'], 'BRIGHT_ORANGE')} | Serving size: {color_text(serving_size, 'BRIGHT_PURPLE')} | Calories: {color_text(calories, 'BRIGHT_PINK')} | Grams: {color_text(grams, 'BRIGHT_CYAN')}")        
+        print(f"Food {color_text("successfully", "BRIGHT_GREEN", True)} logged: {color_text(selected_food['food_name'], 'BRIGHT_ORANGE', True)} | Serving size: {color_text(serving_size, 'BRIGHT_PURPLE', True)} | Calories: {color_text(calories, 'BRIGHT_PINK', True)} | Grams: {color_text(grams, 'BRIGHT_CYAN', True)}")        
       else:
-        print(color_text("Invalid selection! Please enter a valid number.", "BRIGHT_RED"))
+        print(color_text("Invalid selection! Please enter a valid number.", "BRIGHT_RED", True))
     except ValueError:
-      print(color_text("Invalid input! Please enter a number.", "BRIGHT_RED"))
+      print(color_text("Invalid input! Please enter a number.", "BRIGHT_RED", True))
            
   def store_meal(self, selftarget_year, target_month, target_day):
     keep_logging_meals = True
@@ -94,7 +94,7 @@ class MealTracker:
     while keep_logging_meals:
         # Prompt the user to enter a food name
         print("")
-        entered_food = input("Enter " + color_text("food name", "BRIGHT_YELLOW")  + " (or " + color_text("'menu'", "BRIGHT_YELLOW") + " to " + color_text("exit", "BRIGHT_YELLOW") + "): ")          
+        entered_food = input("Enter " + color_text("food name", "BRIGHT_YELLOW", True)  + " (or " + color_text("'menu'", "BRIGHT_YELLOW", True) + " to " + color_text("exit", "BRIGHT_YELLOW", True) + "): ")          
         if(entered_food.lower() == "menu"):
             break
         
@@ -103,15 +103,15 @@ class MealTracker:
         
         # If the food is not found, display an error message
         if(len(nutrition_data) == 0):
-            print(color_text("Meal not found! Please try again with a different name.", "BRIGHT_RED")) 
+            print(color_text("Meal not found! Please try again with a different name.", "BRIGHT_RED", True)) 
         else:
             # If the food is found, display a list of names and nutrition data
             for index, food in enumerate(nutrition_data):
-                print(f"{index + 1}. {color_text(food["food_name"], "BRIGHT_ORANGE")} | " + color_text("Calories", "BRIGHT_PINK") + f", per serving: {color_text(food['calories_per_serving'], 'BRIGHT_PINK')} | " + color_text("Grams", "BRIGHT_CYAN") + f", per serving: {color_text(food['grams_per_serving'], 'BRIGHT_CYAN')}", )
+                print(f"{index + 1}. {color_text(food["food_name"], "BRIGHT_ORANGE", True)} | " + color_text("Calories", "BRIGHT_PINK", True) + f", per serving: {color_text(food['calories_per_serving'], 'BRIGHT_PINK', True)} | " + color_text("Grams", "BRIGHT_CYAN", True) + f", per serving: {color_text(food['grams_per_serving'], 'BRIGHT_CYAN', True)}", )
                             
             # Prompt the user to select a food from the list
             print("")
-            food_selected = input("Enter" + color_text(" food", "BRIGHT_YELLOW") + " by " + color_text("#", "BRIGHT_YELLOW") + " (or " + color_text("'menu'", "BRIGHT_YELLOW") + " to " + color_text("exit", "BRIGHT_YELLOW") + "): ")
+            food_selected = input("Enter" + color_text(" food", "BRIGHT_YELLOW", True) + " by " + color_text("#", "BRIGHT_YELLOW", True) + " (or " + color_text("'menu'", "BRIGHT_YELLOW", True) + " to " + color_text("exit", "BRIGHT_YELLOW", True) + "): ")
                         
             if(food_selected == 'menu'):
               break
@@ -120,7 +120,7 @@ class MealTracker:
               food_selected = int(food_selected)
               self.get_serving_size(nutrition_data, food_selected, selftarget_year, target_month, target_day)             
             except ValueError:
-              print(color_text("Invalid input! Please enter a number.", "BRIGHT_RED"))                
+              print(color_text("Invalid input! Please enter a number.", "BRIGHT_RED", True))                
     return 0
   
   def log_meal(self):

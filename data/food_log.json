@@ -33,5 +33,12 @@
     "calories": 1200,
     "grams": 520,
     "serving_size": 4
+  },
+  {
+    "date": "2020-10-10",
+    "name": "Egg Muffin (Breakfast Sandwich)",
+    "calories": 600,
+    "grams": 260,
+    "serving_size": 2
   }
 ]

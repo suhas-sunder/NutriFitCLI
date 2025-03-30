@@ -39,14 +39,14 @@ class MainMenu:
     # Apply color to each menu item and display it with edge borders
     for index, item in enumerate(menu_items):
       line_edge_border = color_text("|", "DARK_" + menu_colour, True)      
-      print(line_edge_border + color_text(f"   {index + 1}. {item}", "BRIGHT_" + menu_colour) + "  " + line_edge_border)
+      print(line_edge_border + color_text(f"   {index + 1}. {item}", "BRIGHT_" + menu_colour, True) + "  " + line_edge_border)
     
-    # Bottom menu border
+    # Bottom menu border,
     print(color_text(self.border_text_2, "DARK_" + menu_colour, True))   
        
     while True:
       # Prompt user for menu input
-      menu_input = input("Type the" + color_text(" menu # ", "BRIGHT_" + menu_colour, True) + "followed by " + color_text("enter key", "BRIGHT_" + menu_colour, True) + color_text(": ", "DARK_PURPLE"))
+      menu_input = input("Type the" + color_text(" menu # ", "BRIGHT_" + menu_colour, True) + "followed by " + color_text("enter key", "BRIGHT_" + menu_colour, True) + ": ")
       try:
         # If input matches number in menu, return the number
         if(int(menu_input) in range(1, menu_items.__len__() + 1)):
@@ -55,11 +55,11 @@ class MainMenu:
         else:
           print("")
           # If the input is not in the range, display an error message
-          print(color_text("Please enter a number between 1 and " + str(menu_items.__len__()) + "!", "BRIGHT_RED")) 
+          print(color_text("Please enter a number between 1 and " + str(menu_items.__len__()) + "!", "BRIGHT_RED", True)) 
           print("")
       except ValueError:
           # If the input is not a number, display an error message
-          print(color_text("Invalid input. Please enter a number.", "DARK_RED"))
+          print(color_text("Invalid input. Please enter a number.", "DARK_RED", True))
     
   # Display the main menu
   def default_menu(self): 
