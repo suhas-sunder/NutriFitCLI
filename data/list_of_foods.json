@@ -1,0 +1,357 @@
+[
+  {
+    "food_name": "Apple",
+    "calories_per_serving": 95,
+    "grams_per_serving": 182
+  },
+  {
+    "food_name": "Banana",
+    "calories_per_serving": 105,
+    "grams_per_serving": 118
+  },
+  {
+    "food_name": "Carrot",
+    "calories_per_serving": 25,
+    "grams_per_serving": 61
+  },
+  {
+    "food_name": "Broccoli",
+    "calories_per_serving": 55,
+    "grams_per_serving": 156
+  },
+  {
+    "food_name": "Chicken Breast",
+    "calories_per_serving": 165,
+    "grams_per_serving": 174
+  },
+  {
+    "food_name": "Egg",
+    "calories_per_serving": 68,
+    "grams_per_serving": 50
+  },
+  {
+    "food_name": "Rice (White)",
+    "calories_per_serving": 205,
+    "grams_per_serving": 158
+  },
+  {
+    "food_name": "Rice (Brown)",
+    "calories_per_serving": 218,
+    "grams_per_serving": 158
+  },
+  {
+    "food_name": "Avocado",
+    "calories_per_serving": 240,
+    "grams_per_serving": 150
+  },
+  {
+    "food_name": "Sweet Potato",
+    "calories_per_serving": 112,
+    "grams_per_serving": 130
+  },
+  {
+    "food_name": "Spinach",
+    "calories_per_serving": 7,
+    "grams_per_serving": 30
+  },
+  {
+    "food_name": "Tomato",
+    "calories_per_serving": 22,
+    "grams_per_serving": 123
+  },
+  {
+    "food_name": "Orange",
+    "calories_per_serving": 62,
+    "grams_per_serving": 131
+  },
+  {
+    "food_name": "Beef (Ground)",
+    "calories_per_serving": 250,
+    "grams_per_serving": 85
+  },
+  {
+    "food_name": "Pork (Tenderloin)",
+    "calories_per_serving": 142,
+    "grams_per_serving": 85
+  },
+  {
+    "food_name": "Almonds",
+    "calories_per_serving": 164,
+    "grams_per_serving": 28
+  },
+  {
+    "food_name": "Peanut Butter",
+    "calories_per_serving": 190,
+    "grams_per_serving": 32
+  },
+  {
+    "food_name": "Milk (Whole)",
+    "calories_per_serving": 146,
+    "grams_per_serving": 244
+  },
+  {
+    "food_name": "Cheese (Cheddar)",
+    "calories_per_serving": 113,
+    "grams_per_serving": 28
+  },
+  {
+    "food_name": "Yogurt (Plain)",
+    "calories_per_serving": 100,
+    "grams_per_serving": 150
+  },
+  {
+    "food_name": "Cucumber",
+    "calories_per_serving": 16,
+    "grams_per_serving": 100
+  },
+  {
+    "food_name": "Lettuce",
+    "calories_per_serving": 5,
+    "grams_per_serving": 36
+  },
+  {
+    "food_name": "Potato",
+    "calories_per_serving": 130,
+    "grams_per_serving": 156
+  },
+  {
+    "food_name": "Coconut",
+    "calories_per_serving": 283,
+    "grams_per_serving": 80
+  },
+  {
+    "food_name": "Salmon (Cooked)",
+    "calories_per_serving": 232,
+    "grams_per_serving": 154
+  },
+  {
+    "food_name": "Tuna (Canned in Water)",
+    "calories_per_serving": 132,
+    "grams_per_serving": 140
+  },
+  {
+    "food_name": "Bread (Whole Wheat)",
+    "calories_per_serving": 80,
+    "grams_per_serving": 28
+  },
+  {
+    "food_name": "Bread (White)",
+    "calories_per_serving": 70,
+    "grams_per_serving": 28
+  },
+  {
+    "food_name": "Oats (Rolled)",
+    "calories_per_serving": 150,
+    "grams_per_serving": 40
+  },
+  {
+    "food_name": "Quinoa (Cooked)",
+    "calories_per_serving": 120,
+    "grams_per_serving": 185
+  },
+  {
+    "food_name": "Chia Seeds",
+    "calories_per_serving": 137,
+    "grams_per_serving": 28
+  },
+  {
+    "food_name": "Cherries",
+    "calories_per_serving": 87,
+    "grams_per_serving": 154
+  },
+  {
+    "food_name": "Pineapple",
+    "calories_per_serving": 82,
+    "grams_per_serving": 165
+  },
+  {
+    "food_name": "Grapes",
+    "calories_per_serving": 104,
+    "grams_per_serving": 151
+  },
+  {
+    "food_name": "Strawberries",
+    "calories_per_serving": 49,
+    "grams_per_serving": 150
+  },
+  {
+    "food_name": "Blueberries",
+    "calories_per_serving": 57,
+    "grams_per_serving": 148
+  },
+  {
+    "food_name": "Watermelon",
+    "calories_per_serving": 30,
+    "grams_per_serving": 152
+  },
+  {
+    "food_name": "Peach",
+    "calories_per_serving": 58,
+    "grams_per_serving": 150
+  },
+  {
+    "food_name": "Cantaloupe",
+    "calories_per_serving": 53,
+    "grams_per_serving": 156
+  },
+  {
+    "food_name": "Hamburger",
+    "calories_per_serving": 250,
+    "grams_per_serving": 120
+  },
+  {
+    "food_name": "Cheeseburger",
+    "calories_per_serving": 300,
+    "grams_per_serving": 130
+  },
+  {
+    "food_name": "French Fries (Medium)",
+    "calories_per_serving": 365,
+    "grams_per_serving": 117
+  },
+  {
+    "food_name": "Chicken Nuggets (6 pieces)",
+    "calories_per_serving": 280,
+    "grams_per_serving": 90
+  },
+  {
+    "food_name": "Chicken Sandwich",
+    "calories_per_serving": 380,
+    "grams_per_serving": 160
+  },
+  {
+    "food_name": "Fish Sandwich",
+    "calories_per_serving": 380,
+    "grams_per_serving": 180
+  },
+  {
+    "food_name": "Pizza (Slice, Pepperoni)",
+    "calories_per_serving": 285,
+    "grams_per_serving": 75
+  },
+  {
+    "food_name": "Pizza (Slice, Cheese)",
+    "calories_per_serving": 220,
+    "grams_per_serving": 75
+  },
+  {
+    "food_name": "Hot Dog",
+    "calories_per_serving": 150,
+    "grams_per_serving": 60
+  },
+  {
+    "food_name": "Cheese Fries",
+    "calories_per_serving": 400,
+    "grams_per_serving": 120
+  },
+  {
+    "food_name": "Onion Rings",
+    "calories_per_serving": 300,
+    "grams_per_serving": 85
+  },
+  {
+    "food_name": "Taco (Ground Beef)",
+    "calories_per_serving": 170,
+    "grams_per_serving": 70
+  },
+  {
+    "food_name": "Taco (Chicken)",
+    "calories_per_serving": 180,
+    "grams_per_serving": 70
+  },
+  {
+    "food_name": "Burrito (Beef)",
+    "calories_per_serving": 350,
+    "grams_per_serving": 170
+  },
+  {
+    "food_name": "Burrito (Chicken)",
+    "calories_per_serving": 360,
+    "grams_per_serving": 180
+  },
+  {
+    "food_name": "Quesadilla",
+    "calories_per_serving": 400,
+    "grams_per_serving": 150
+  },
+  {
+    "food_name": "Chicken Wings (6 pieces)",
+    "calories_per_serving": 430,
+    "grams_per_serving": 150
+  },
+  {
+    "food_name": "Salad (Caesar)",
+    "calories_per_serving": 190,
+    "grams_per_serving": 150
+  },
+  {
+    "food_name": "Salad (Garden)",
+    "calories_per_serving": 150,
+    "grams_per_serving": 150
+  },
+  {
+    "food_name": "Milkshake (Vanilla)",
+    "calories_per_serving": 500,
+    "grams_per_serving": 300
+  },
+  {
+    "food_name": "Milkshake (Chocolate)",
+    "calories_per_serving": 550,
+    "grams_per_serving": 300
+  },
+  {
+    "food_name": "Soda (Coca-Cola, Medium)",
+    "calories_per_serving": 210,
+    "grams_per_serving": 250
+  },
+  {
+    "food_name": "Soda (Sprite, Medium)",
+    "calories_per_serving": 200,
+    "grams_per_serving": 250
+  },
+  {
+    "food_name": "Ice Cream Cone",
+    "calories_per_serving": 200,
+    "grams_per_serving": 100
+  },
+  {
+    "food_name": "Apple Pie",
+    "calories_per_serving": 250,
+    "grams_per_serving": 100
+  },
+  {
+    "food_name": "Chocolate Chip Cookie",
+    "calories_per_serving": 160,
+    "grams_per_serving": 40
+  },
+  {
+    "food_name": "Fried Chicken (2 pieces)",
+    "calories_per_serving": 400,
+    "grams_per_serving": 150
+  },
+  {
+    "food_name": "Egg Muffin (Breakfast Sandwich)",
+    "calories_per_serving": 300,
+    "grams_per_serving": 130
+  },
+  {
+    "food_name": "Breakfast Burrito",
+    "calories_per_serving": 350,
+    "grams_per_serving": 180
+  },
+  {
+    "food_name": "Bagel with Cream Cheese",
+    "calories_per_serving": 300,
+    "grams_per_serving": 120
+  },
+  {
+    "food_name": "Fried Mozzarella Sticks (6 pieces)",
+    "calories_per_serving": 300,
+    "grams_per_serving": 90
+  },
+  {
+    "food_name": "Pasta (Spaghetti with Marinara)",
+    "calories_per_serving": 400,
+    "grams_per_serving": 200
+  }
+]

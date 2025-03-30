@@ -1,5 +1,9 @@
-from colour_sequence import color_text
+
 import os
+from colour_sequence import color_text
+from modules.meal_tracker import MealTracker
+from modules.exercise_tracker import ExerciseTracker
+from modules.calendar_events import CalendarEvents
 
 class MainMenu:
   def __init__(self):
@@ -68,8 +72,8 @@ class MainMenu:
     menu_items = ["Add Meal             ", "Remove Meal            ", "Main Menu           ", "Exit                    "]
     menu_selection = self.get_menu_input(menu_items, menu_color)  
     
-    if(menu_selection == 1):
-      print("Add Exercise")
+    if(menu_selection == 1):   
+        MealTracker().log_meal()
     elif(menu_selection == 2):
       print("Remove Exercise")    
     else:

@@ -4,9 +4,6 @@
   "DIM": "\\033[2m",
   "ITALIC": "\\033[3m",
   "UNDERLINE": "\\033[4m",
-  "BLINK": "\\033[5m",
-  "REVERSE": "\\033[7m",
-  "HIDDEN": "\\033[8m",
   
   "DARK_BLACK": "\\033[38;5;16m",
   "DARK_RED": "\\033[38;5;52m",
@@ -58,11 +55,5 @@
   "BG_BRIGHT_PINK": "\\033[48;5;205m",
   "BG_BRIGHT_ORANGE": "\\033[48;5;208m",
   "BG_BRIGHT_MAGENTA": "\\033[48;5;201m",
-  "BG_BRIGHT_TURQUOISE": "\\033[48;5;45m",
-  
-  "CROSS_OUT": "\\033[9m",
-  "DOUBLE_UNDERLINE": "\\033[21m",
-  "FRAMED": "\\033[51m",
-  "ENCIRCLED": "\\033[52m",
-  "OVERLINED": "\\033[53m"
+  "BG_BRIGHT_TURQUOISE": "\\033[48;5;45m"
 }

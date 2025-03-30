@@ -1,0 +1,154 @@
+[
+  {
+    "exercise_name": "Running (5 mph)",
+    "calories_burned_per_min": 8.5
+  },
+  {
+    "exercise_name": "Running (6 mph)",
+    "calories_burned_per_min": 10
+  },
+  {
+    "exercise_name": "Jogging (4 mph)",
+    "calories_burned_per_min": 6.5
+  },
+  {
+    "exercise_name": "Cycling (Moderate)",
+    "calories_burned_per_min": 7
+  },
+  {
+    "exercise_name": "Cycling (Fast)",
+    "calories_burned_per_min": 10
+  },
+  {
+    "exercise_name": "Swimming (Moderate)",
+    "calories_burned_per_min": 7.5
+  },
+  {
+    "exercise_name": "Swimming (Fast)",
+    "calories_burned_per_min": 10
+  },
+  {
+    "exercise_name": "Jump Rope",
+    "calories_burned_per_min": 12
+  },
+  {
+    "exercise_name": "Walking (3 mph)",
+    "calories_burned_per_min": 4
+  },
+  {
+    "exercise_name": "Walking (4 mph)",
+    "calories_burned_per_min": 5
+  },
+  {
+    "exercise_name": "Rowing (Moderate)",
+    "calories_burned_per_min": 6
+  },
+  {
+    "exercise_name": "Rowing (Fast)",
+    "calories_burned_per_min": 8
+  },
+  {
+    "exercise_name": "Yoga (Hatha)",
+    "calories_burned_per_min": 3.5
+  },
+  {
+    "exercise_name": "Yoga (Vinyasa)",
+    "calories_burned_per_min": 5
+  },
+  {
+    "exercise_name": "Pilates",
+    "calories_burned_per_min": 4.5
+  },
+  {
+    "exercise_name": "Strength Training (Weightlifting)",
+    "calories_burned_per_min": 5
+  },
+  {
+    "exercise_name": "Bodyweight Exercises",
+    "calories_burned_per_min": 6
+  },
+  {
+    "exercise_name": "Jumping Jacks",
+    "calories_burned_per_min": 8
+  },
+  {
+    "exercise_name": "Push-Ups",
+    "calories_burned_per_min": 7
+  },
+  {
+    "exercise_name": "Sit-Ups",
+    "calories_burned_per_min": 6
+  },
+  {
+    "exercise_name": "Plank",
+    "calories_burned_per_min": 3.5
+  },
+  {
+    "exercise_name": "Burpees",
+    "calories_burned_per_min": 10
+  },
+  {
+    "exercise_name": "Mountain Climbers",
+    "calories_burned_per_min": 8
+  },
+  {
+    "exercise_name": "High Knees",
+    "calories_burned_per_min": 7.5
+  },
+  {
+    "exercise_name": "Squats",
+    "calories_burned_per_min": 5.5
+  },
+  {
+    "exercise_name": "Lunges",
+    "calories_burned_per_min": 6
+  },
+  {
+    "exercise_name": "Walking Lunges",
+    "calories_burned_per_min": 7
+  },
+  {
+    "exercise_name": "Stair Climbing",
+    "calories_burned_per_min": 8
+  },
+  {
+    "exercise_name": "Tai Chi",
+    "calories_burned_per_min": 4
+  },
+  {
+    "exercise_name": "Stretching",
+    "calories_burned_per_min": 2.5
+  },
+  {
+    "exercise_name": "Dancing (Moderate)",
+    "calories_burned_per_min": 6
+  },
+  {
+    "exercise_name": "Dancing (Intense)",
+    "calories_burned_per_min": 8
+  },
+  {
+    "exercise_name": "Elliptical (Moderate)",
+    "calories_burned_per_min": 7
+  },
+  {
+    "exercise_name": "Elliptical (Fast)",
+    "calories_burned_per_min": 9
+  },
+  {
+    "exercise_name": "Skiing (Cross-Country)",
+    "calories_burned_per_min": 8
+  },
+  {
+    "exercise_name": "Skiing (Downhill)",
+    "calories_burned_per_min": 6
+  },
+  {
+    "exercise_name": "Hiking",
+    "calories_burned_per_min": 7
+  },
+  {
+    "exercise_name": "Zumba",
+    "calories_burned_per_min": 9
+  }
+]
