@@ -7,8 +7,6 @@
 import os
 from colour_sequence import color_text
 from modules.meal_tracker import MealTracker
-from modules.exercise_tracker import ExerciseTracker
-from Z_FINAL_PROJ.NutriFitCLI.modules.data_query import CalendarEvents
 
 class MainMenu:
   def __init__(self):
@@ -48,7 +46,7 @@ class MainMenu:
        
     while True:
       # Prompt user for menu input
-      menu_input = input("Type the" + color_text(" menu # ", "BRIGHT_" + menu_colour, True) + "followed by " + color_text("enter key", "BRIGHT_" + menu_colour, True) + color_text(":", "DARK_PURPLE"))
+      menu_input = input("Type the" + color_text(" menu # ", "BRIGHT_" + menu_colour, True) + "followed by " + color_text("enter key", "BRIGHT_" + menu_colour, True) + color_text(": ", "DARK_PURPLE"))
       try:
         # If input matches number in menu, return the number
         if(int(menu_input) in range(1, menu_items.__len__() + 1)):
@@ -67,7 +65,7 @@ class MainMenu:
   def default_menu(self): 
     menu_color = "YELLOW"
     self.display_header("📜 ", "Main", menu_color) 
-    menu_items = ["Log Meal(s)              ", "Log Exercise             ", "Search Logs by Date      ", "Monthly Activity Calendar", "Calories Burned By Month ", "Exit                     "]
+    menu_items = ["Log Meal(s)              ", "Log Exercise             ", "Search Logs by Date      ", "Monthly Activity Calendar", "Total Calories Burned    ", "Exit                     "]
     return self.get_menu_input(menu_items, menu_color)    
             
   # Display the food log menu

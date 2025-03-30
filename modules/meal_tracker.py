@@ -22,7 +22,7 @@ class MealTracker:
   
   def get_date(self):
     while True:
-        entered_date = input("Enter the date (YYYY-MM-DD): ")
+        entered_date = input("Enter the " + color_text("date ", "BRIGHT_YELLOW") + "(" + color_text("YYYY", "BRIGHT_YELLOW") + "-" + color_text("MM", "BRIGHT_YELLOW") + "-" + color_text("DD", "BRIGHT_YELLOW") + "): ")
         
         try:
             correct_date = datetime.strptime(entered_date, "%Y-%m-%d")
@@ -62,6 +62,7 @@ class MealTracker:
   def get_serving_size(self, nutrition_data, food_selected, target_year, target_month, target_day):
     try:
       if(int(food_selected) in range(1, len(nutrition_data) + 1)):
+        print("")
         serving_size = input("Please input the serving size: ")
         # Calculate the calories and grams based on the serving size entered
         selected_food = nutrition_data[int(food_selected) - 1]
@@ -81,7 +82,7 @@ class MealTracker:
         self.log_food_to_json(food_data)
         
         os.system('cls' if os.name == 'nt' else 'clear')  # Clear the console         
-        print(f"Food successfully logged: {selected_food['food_name']} | Serving size: {serving_size} | Calories: {calories} | Grams: {grams}")        
+        print(f"Food {color_text("successfully", "BRIGHT_GREEN", true)} logged: {color_text(selected_food['food_name'], 'BRIGHT_ORANGE')} | Serving size: {color_text(serving_size, 'BRIGHT_PURPLE')} | Calories: {color_text(calories, 'BRIGHT_PINK')} | Grams: {color_text(grams, 'BRIGHT_CYAN')}")        
       else:
         print(color_text("Invalid selection! Please enter a valid number.", "BRIGHT_RED"))
     except ValueError:
@@ -92,8 +93,9 @@ class MealTracker:
     
     while keep_logging_meals:
         # Prompt the user to enter a food name
-        entered_food = input("Enter food name: ")          
-        if(entered_food.lower() == "exit"):
+        print("")
+        entered_food = input("Enter " + color_text("food name", "BRIGHT_YELLOW")  + " (or " + color_text("'menu'", "BRIGHT_YELLOW") + " to " + color_text("exit", "BRIGHT_YELLOW") + "): ")          
+        if(entered_food.lower() == "menu"):
             break
         
         # Check if food exists in the list      
@@ -105,18 +107,23 @@ class MealTracker:
         else:
             # If the food is found, display a list of names and nutrition data
             for index, food in enumerate(nutrition_data):
-                print(f"{index + 1}. {food["food_name"]} | Calories per serving: {food['calories_per_serving']} | Grams per serving: {food['grams_per_serving']}", )
-                                
+                print(f"{index + 1}. {color_text(food["food_name"], "BRIGHT_ORANGE")} | " + color_text("Calories", "BRIGHT_PINK") + f", per serving: {color_text(food['calories_per_serving'], 'BRIGHT_PINK')} | " + color_text("Grams", "BRIGHT_CYAN") + f", per serving: {color_text(food['grams_per_serving'], 'BRIGHT_CYAN')}", )
+                            
+            # Prompt the user to select a food from the list
+            print("")
+            food_selected = input("Enter" + color_text(" food", "BRIGHT_YELLOW") + " by " + color_text("#", "BRIGHT_YELLOW") + " (or " + color_text("'menu'", "BRIGHT_YELLOW") + " to " + color_text("exit", "BRIGHT_YELLOW") + "): ")
+                        
+            if(food_selected == 'menu'):
+              break
+                               
             try:
-              # Select the food by entering its number.
-              food_selected = input("Select the food by entering its number: ")
+              food_selected = int(food_selected)
               self.get_serving_size(nutrition_data, food_selected, selftarget_year, target_month, target_day)             
             except ValueError:
               print(color_text("Invalid input! Please enter a number.", "BRIGHT_RED"))                
     return 0
   
   def log_meal(self):
-    selftarget_year, target_month, target_day = self.get_date()
-    
     os.system('cls' if os.name == 'nt' else 'clear')  # Clear the console
+    selftarget_year, target_month, target_day = self.get_date()    
     return self.store_meal(selftarget_year, target_month, target_day)
