@@ -20,24 +20,11 @@ class MealTracker:
            print(color_text("Invalid date! Please enter the date in YYYY-MM-DD format.", "BRIGHT_RED")) 
            print("")
            
-  def food_search(self, entered_food):
-    # Your FatSecret API credentials
-    access_token = 'YOUR_ACCESS_TOKEN'
-    access_token_secret = 'YOUR_ACCESS_TOKEN_SECRET'
-
-    # Public API URL
-    api_url = 'https://api.api-ninjas.com/v1/nutrition?query={}'.format(entered_food)
-    response = requests.get(api_url, headers={'X-Api-Key': 'psGOXG38iaaKNMgZscPiBg==U7Rs5EAsI9JPpsvk'})
-    print(response)
-    if response.status_code == requests.codes.ok:
-        print(response.text)
-    else:
-        print("Error:", response.status_code, response.text)
- 
+  def food_search(self, entered_food): 
        
     while True:               
         try:
-            food_data = requests.get(url) 
+            food_data = entered_food
             print(food_data)
         except ValueError:
            print("")
