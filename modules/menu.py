@@ -36,7 +36,7 @@ class MainMenu:
     # Apply color to each menu item and display it with edge borders
     for index, item in enumerate(menu_items):
       line_edge_border = color_text("|", "DARK_" + menu_colour, True)      
-      print(line_edge_border + color_text(f"   {index + 1}. {item}", "BRIGHT_" + menu_colour) + "   " + line_edge_border)
+      print(line_edge_border + color_text(f"   {index + 1}. {item}", "BRIGHT_" + menu_colour) + "  " + line_edge_border)
     
     # Bottom menu border
     print(color_text(self.border_text_2, "DARK_" + menu_colour, True))   
@@ -62,7 +62,7 @@ class MainMenu:
   def default_menu(self): 
     menu_color = "YELLOW"
     self.display_header("📜 ", "Main", menu_color) 
-    menu_items = ["Log Meal(s)             ", "Log Exercise            ", "Daily Tracker           ", "Weekly Tracker          ", "Monthly Tracker         ", "Yearly Tracker          ", "Exit                    "]
+    menu_items = ["Log Meal(s)              ", "Log Exercise             ", "Search Logs by Date      ", "Monthly Activity Calendar", "Calories Burned By Month ", "Exit                     "]
     return self.get_menu_input(menu_items, menu_color)    
             
   # Display the food log menu
@@ -73,7 +73,7 @@ class MainMenu:
     menu_selection = self.get_menu_input(menu_items, menu_color)  
     
     if(menu_selection == 1):   
-        MealTracker().log_meal()
+      return MealTracker().log_meal()
     elif(menu_selection == 2):
       print("Remove Exercise")    
     else:
