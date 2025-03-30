@@ -66,7 +66,7 @@ class MainMenu:
   def default_menu(self): 
     menu_color = "YELLOW"
     self.display_header("📜 ", "Main", menu_color) 
-    menu_items = ["Log Meal(s)              ", "Log Exercise             ", "Search Logs by Date      ", "Monthly Activity Calendar", "Total Calories Burned    ", "Exit                     "]
+    menu_items = ["Log Meal(s)              ", "Log Exercise(s)             ", "Search Logs by Date      ", "Monthly Activity Calendar", "Total Calories Burned    ", "Exit                     "]
     return self.get_menu_input(menu_items, menu_color)    
             
   # Display the food log menu
@@ -81,7 +81,7 @@ class MainMenu:
     if(menu_selection == 1):   
       return MealTracker().log_meal()
     elif(menu_selection == 2):
-      print("Remove Exercise")    
+      return MealTracker().remove_meal()   
     else:
       return self.exit_to_main_menu(menu_selection)
     
@@ -97,7 +97,7 @@ class MainMenu:
     if(menu_selection == 1):
       return ExerciseTracker().log_exercise()
     elif(menu_selection == 2):
-      print("Remove Exercise")    
+      return ExerciseTracker().remove_exercise()  
     else:
       return self.exit_to_main_menu(menu_selection)
     
