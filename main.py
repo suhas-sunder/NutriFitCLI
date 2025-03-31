@@ -11,7 +11,7 @@ sys.path.append('modules') # Add the modules directory to the Python path
 
 # Importing relevant classes from the modules directory
 from modules.menu import MainMenu
-from modules.colour_sequence import color_text
+from modules.colour_sequence import ColorSequence
 
 def main():
     menu_choice = 0
@@ -38,7 +38,7 @@ def main():
                 print("")
                 print("")
                 print("")
-                print(color_text("| 🎊 | Thank you for using", "BRIGHT_PURPLE", True), color_text("NutriFitCLI", "BRIGHT_YELLOW", True) + color_text(". Goodbye! | 🎊 |", "BRIGHT_PURPLE", True))
+                print(ColorSequence().color_text("| 🎊 | Thank you for using", "BRIGHT_PURPLE", True), ColorSequence().color_text("NutriFitCLI", "BRIGHT_YELLOW", True) + ColorSequence().color_text(". Goodbye! | 🎊 |", "BRIGHT_PURPLE", True))
                 print("")
                 print("")
                 print("")
