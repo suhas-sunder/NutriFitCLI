@@ -187,8 +187,7 @@ class QueryData:
         print("Error: data_log.json is not a valid JSON file.")
     except Exception as e:
         print(f"Unexpected error: {e}")
-  
-  
+    
   def calories_burned_by_date(self, target_year, target_month, target_day):
     meals_logged = self.meals_by_date(target_year, target_month, target_day, False)
     exercises_logged = self.exercises_by_date(target_year, target_month, target_day, False)

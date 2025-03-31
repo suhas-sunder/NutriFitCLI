@@ -76,7 +76,7 @@ class MainMenu:
   # Display the food log menu
   def meal_log_menu(self):
     # Display the food log menu
-    menu_color = "CYAN"
+    menu_color = "RED"
     self.display_header("  🍜 ", "Meals", menu_color, "        ") 
     menu_items = ["Add Meal                 ", "Remove Meal              ", "Main Menu                "]
     menu_selection = self.get_menu_input(menu_items, menu_color)  
