@@ -29,9 +29,9 @@ def main():
             case 3:
                 menu_choice = MainMenu().search_by_date()
             case 4:
-                menu_choice = MainMenu().monthly_activity_calendar()
-            case 5:
                 menu_choice = MainMenu().total_calories_burned()
+            case 5:
+                menu_choice = MainMenu().monthly_activity_calendar()
             case 6:
                 # Display the exit message
                 os.system('cls' if os.name == 'nt' else 'clear')  # Clear the console
