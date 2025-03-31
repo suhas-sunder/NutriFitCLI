@@ -8,6 +8,10 @@ developed, an architecture diagram of the application, how to compile and/or run
 the command line, challenges and future enhancements.
 
 
+### Architectural Diagram:
+<img width="503" alt="image" src="https://github.com/user-attachments/assets/8a9b069b-9415-48e8-a077-01ba6c0a6f4f" />
+
+
 Runs from the command-line on Linux/Ubuntu. Must not be a web app, and it does not
 need to have a graphical user interface, but it can be a game that runs from command
 line.
