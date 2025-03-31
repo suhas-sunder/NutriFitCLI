@@ -40,5 +40,26 @@
     "calories": 374,
     "grams": 770,
     "serving_size": 22
+  },
+  {
+    "date": "2020-10-10",
+    "name": "Bread",
+    "calories": 790,
+    "grams": 300,
+    "serving_size": 10
+  },
+  {
+    "date": "2020-10-10",
+    "name": "Egg",
+    "calories": 408,
+    "grams": 300,
+    "serving_size": 6
+  },
+  {
+    "date": "2020-10-11",
+    "name": "Apple Cider",
+    "calories": 2400,
+    "grams": 4800,
+    "serving_size": 20
   }
 ]

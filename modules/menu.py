@@ -9,6 +9,7 @@ from colour_sequence import color_text
 from modules.meal_tracker import MealTracker
 from modules.exercise_tracker import ExerciseTracker
 from modules.data_query import QueryData
+from modules.calendar import Calendar
 
 class MainMenu:
   def __init__(self):
@@ -74,7 +75,7 @@ class MainMenu:
   def meal_log_menu(self):
     # Display the food log menu
     menu_color = "CYAN"
-    self.display_header("🍜 ", "Calorie", menu_color, "        ") 
+    self.display_header("  🍜 ", "Meals", menu_color, "        ") 
     menu_items = ["Add Meal                 ", "Remove Meal              ", "Main Menu                "]
     menu_selection = self.get_menu_input(menu_items, menu_color)  
     
@@ -215,15 +216,40 @@ class MainMenu:
     # Display the activity calendar menu
     menu_color = "CYAN"
     self.display_header("📅 ", "Calendar", menu_color, "        ")    
-    menu_items = ["Meals Logged             ", "Workouts Logged          ", "All Activity             ", "Main Menu                "]
+    menu_items = ["Days with Meals          ", "Days with Workouts       ", "Days with Meal & Workout ", "Main Menu                "]
     menu_selection = self.get_menu_input(menu_items, menu_color)    
     
     # Handle menu selection
     if(menu_selection == 1):
-      print("Only Meals")
+      while True:
+        # Get the selected date
+        target_year, target_month, target_day, exit_flag = QueryData().get_date()  
+        
+        # Return to main menu
+        if(exit_flag):
+          return 0
+        
+        Calendar().meals_by_month(target_year, target_month)
     elif(menu_selection == 2):
-      print("Only Exercises")  
+      while True:
+        # Get the selected date
+        target_year, target_month, target_day, exit_flag = QueryData().get_date()  
+        
+        # Return to main menu
+        if(exit_flag):
+          return 0
+        
+        Calendar().workouts_by_month(target_year, target_month)  
     elif(menu_selection == 3):
-      print("Meals and Exercises") 
+      while True:
+        # Get the selected date
+        target_year, target_month, target_day, exit_flag = QueryData().get_date()  
+        
+        # Return to main menu
+        if(exit_flag):
+          return 0
+        
+        Calendar().activities_by_month(target_year, target_month)
+        
     else:
       return self.exit_to_main_menu(menu_selection)
