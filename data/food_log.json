@@ -61,5 +61,12 @@
     "calories": 2400,
     "grams": 4800,
     "serving_size": 20
+  },
+  {
+    "date": "2020-10-16",
+    "name": "Carrot",
+    "calories": 5000,
+    "grams": 12200,
+    "serving_size": 200
   }
 ]

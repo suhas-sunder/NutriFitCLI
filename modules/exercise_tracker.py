@@ -3,7 +3,7 @@
 #  Authors: Suhas Sunder - 100548159
 #  Date: March 28, 2025
 #  Title: NutriFitCLI (NutriFit Command Line Interface)
-#  Description: Handles all logic with adding and removing workout logs
+#  Description: Handles all logic related to adding and removing workout logs.
   
 import os # Importing os module
 from colour_sequence import ColorSequence
@@ -121,6 +121,7 @@ class ExerciseTracker:
         return 0 # Return to main menu
          
       try:
+        # Prompt user to delete exercise from list
         if int(exercise_selected) in range(1, len(exercises_logged) + 1):          
           QueryData().delete_exercise(exercises_logged[int(exercise_selected) - 1])         
           user_input = input(f"Press {self.color_text('any key', 'BRIGHT_YELLOW', True)} to delete more" + " ~ (or " + self.color_text("'menu'", "BRIGHT_YELLOW", True) + " for " + self.color_text("MAIN MENU", "BRIGHT_YELLOW", True) + "): ")

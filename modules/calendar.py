@@ -2,7 +2,7 @@
 #  Authors: Suhas Sunder - 100548159
 #  Date: March 28, 2025
 #  Title: NutriFitCLI (NutriFit Command Line Interface)
-#  Description: Displays calendar UI to visualizeh meal and exercise logs
+#  Description: Displays calendar UI to visualize meal and exercise logs.
 
 import os # Importing os module
 import re
