@@ -114,17 +114,27 @@ class QueryData:
         overall_calories_consumed += calories_consumed
         total_overall_calories_burned += total_calories_burned
 
+    print("")
     print(color_text("MONTHLY CALORIES BURNED:", "BRIGHT_GREEN", True))
     print(f"Target Month: {color_text(target_year, 'BRIGHT_ORANGE', True)}-{color_text(target_month, 'BRIGHT_ORANGE', True)} | Monthly Calories Consumed: {color_text(overall_calories_consumed, 'BRIGHT_PURPLE', True)} | Monthly Calories Burned: {color_text(overall_calories_burned, 'BRIGHT_CYAN', True)} | {color_text('TOTAL MONTHLY CALORIES BURNED:', 'BRIGHT_GREEN', True)} {color_text(total_overall_calories_burned, 'BRIGHT_GREEN', True)}")
 
-  def monthly_exercise_calendar(self, target_year, target_month):
-    pass
-  
-  def monthly_meal_calendar(self, target_year, target_month):
-    pass
-  
-  def monthly_mixed_calendar(self, target_year, target_month):
-    pass
+  def actvity_dates_by_month(self, target_year, target_month):
+    total_days = calendar.monthrange(target_year, target_month)[1]  # Get number of calendar days in the target month
+    
+    meals_logged = []
+    workouts_logged = []
+    
+    # Iterate over each day in the month to get the meals and exercises logged
+    for day in range(1, total_days + 1):
+      meals_logged.extend(self.meals_by_date(target_year, target_month, day, False))
+      workouts_logged.extend(self.exercises_by_date(target_year, target_month, day, False))
+        
+    # Extract unique dates from the meal and exercise logs
+    meal_dates = {meal["date"] for meal in meals_logged}
+    workout_dates = {workout["date"] for workout in workouts_logged}
+        
+    return meal_dates, workout_dates
+
   
   def get_date(self):
     os.system('cls' if os.name == 'nt' else 'clear')  # Clear the console

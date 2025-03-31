@@ -16,5 +16,11 @@
     "name": "Running (5 mph)",
     "calories_burned": 1600,
     "minutes_exercised": 200
+  },
+  {
+    "date": "2020-10-18",
+    "name": "Pilates",
+    "calories_burned": 80,
+    "minutes_exercised": 20
   }
 ]

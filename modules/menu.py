@@ -2,13 +2,14 @@
 #  Authors: Suhas Sunder - 100548159
 #  Date: March 28, 2025
 #  Title: NutriFitCLI (NutriFit Command Line Interface)
-#  Description: Handles all menu UI
+#  Description: Handles all menu UI logic & rendering
 
 import os
 from colour_sequence import color_text
 from modules.meal_tracker import MealTracker
 from modules.exercise_tracker import ExerciseTracker
 from modules.data_query import QueryData
+from modules.calendar import Calendar
 
 class MainMenu:
   def __init__(self):
@@ -31,9 +32,9 @@ class MainMenu:
     # Top menu border
     print(color_text(self.border_text_2, "DARK_" + header_color, True))
     
-  def exit_to_main_menu(self, menu_selection):
+  def exit_to_main_menu(self, menu_selection, exit_index=3):
     # Handle return to main menu or exit the program
-    if(menu_selection == 3):
+    if(menu_selection == exit_index):
       return 0;    
     return 7
         
@@ -74,8 +75,8 @@ class MainMenu:
   def meal_log_menu(self):
     # Display the food log menu
     menu_color = "CYAN"
-    self.display_header("🍜 ", "Calorie", menu_color, "        ") 
-    menu_items = ["Add Meal             ", "Remove Meal            ", "Main Menu           "]
+    self.display_header("  🍜 ", "Meals", menu_color, "        ") 
+    menu_items = ["Add Meal                 ", "Remove Meal              ", "Main Menu                "]
     menu_selection = self.get_menu_input(menu_items, menu_color)  
     
     # Handle menu selection
@@ -91,7 +92,7 @@ class MainMenu:
     menu_color = "ORANGE"
     self.display_header("👟 ", "Exercise", menu_color, "        ") 
     
-    menu_items = ["Add Exercise             ", "Remove Exercise            ", "Main Menu           "]
+    menu_items = ["Add Exercise             ", "Remove Exercise          ", "Main Menu                "]
     menu_selection = self.get_menu_input(menu_items, menu_color)  
     
     # Handle menu selection
@@ -105,7 +106,7 @@ class MainMenu:
   def search_by_date(self):
     # Display the search by date menu
     menu_color = "PURPLE"
-    self.display_header("🔍 ", "Search", menu_color, "        ")     
+    self.display_header(" 🔍 ", "Search", menu_color, "        ")     
     menu_items = ["Meals Logged By Date      ", "Workouts Logged By Date   ", "Meals & Workouts By Date  ", "Main Menu                 "]
     menu_selection = self.get_menu_input(menu_items, menu_color)    
     
@@ -119,10 +120,11 @@ class MainMenu:
         if(exit_flag):
           return 0
         
+        os.system('cls' if os.name == 'nt' else 'clear')
+        print(f"LIST OF MEALS LOGGED ON: {color_text(f"{target_year}-{target_month}-{target_day}", 'BRIGHT_YELLOW', True)}")
         # Display the calorie log for the selected date
-        QueryData().calories_burned_by_date(target_year, target_month, target_day) 
-
-        print("")
+        QueryData().meals_by_date(target_year, target_month, target_day) 
+        
         user_input = input(f"Press {color_text('any key', 'BRIGHT_YELLOW', True)} to search another day" + " ~ (or " + color_text("'menu'", "BRIGHT_YELLOW", True) + " for " + color_text("MAIN MENU", "BRIGHT_YELLOW", True) + "): ")
         if(user_input == 'menu'):
           return 0 
@@ -135,20 +137,41 @@ class MainMenu:
         if(exit_flag):
           return 0
         
+        os.system('cls' if os.name == 'nt' else 'clear')
+        print(f"LIST OF WORKOUTS LOGGED ON: {color_text(f"{target_year}-{target_month}-{target_day}", 'BRIGHT_YELLOW', True)}")
         # Display the calorie log for the selected date
-        QueryData().calories_burned_by_month(target_year, target_month) 
+        QueryData().exercises_by_date(target_year, target_month, target_day) 
         
-        print("")
-        user_input = input(f"Press {color_text('any key', 'BRIGHT_YELLOW', True)} to search another month" + " ~ (or " + color_text("'menu'", "BRIGHT_YELLOW", True) + " for " + color_text("MAIN MENU", "BRIGHT_YELLOW", True) + "): ")
+        user_input = input(f"Press {color_text('any key', 'BRIGHT_YELLOW', True)} to search another day" + " ~ (or " + color_text("'menu'", "BRIGHT_YELLOW", True) + " for " + color_text("MAIN MENU", "BRIGHT_YELLOW", True) + "): ")
+        if(user_input == 'menu'):
+          return 0 
+    elif(menu_selection == 3): 
+      while True:    
+        # Get the selected date
+        target_year, target_month, target_day, exit_flag = QueryData().get_date()  
+        
+        # Return to main menu
+        if(exit_flag):
+          return 0
+        
+        os.system('cls' if os.name == 'nt' else 'clear')
+        print(f"LIST OF MEALS LOGGED ON: {color_text(f"{target_year}-{target_month}-{target_day}", 'BRIGHT_YELLOW', True)}")
+        # Display the calorie log for the selected date
+        QueryData().meals_by_date(target_year, target_month, target_day)
+        print(f"LIST OF WORKOUTS LOGGED ON: {color_text(f"{target_year}-{target_month}-{target_day}", 'BRIGHT_YELLOW', True)}")
+        # Display the calorie log for the selected date
+        QueryData().exercises_by_date(target_year, target_month, target_day) 
+        
+        user_input = input(f"Press {color_text('any key', 'BRIGHT_YELLOW', True)} to search another day" + " ~ (or " + color_text("'menu'", "BRIGHT_YELLOW", True) + " for " + color_text("MAIN MENU", "BRIGHT_YELLOW", True) + "): ")
         if(user_input == 'menu'):
           return 0 
     else:
-      return self.exit_to_main_menu(menu_selection)
+      return self.exit_to_main_menu(menu_selection, 4)
              
   def total_calories_burned(self):
     # Display the total calories burned menu
     menu_color = "ORANGE"
-    self.display_header("🔥 ", "Calories Burned", menu_color, "        ")     
+    self.display_header("🔥 ", "Cals Burned", menu_color, "        ")     
     menu_items = ["Calories Burned By Date  ", "Calories Burned By Month ", "Main Menu                "]
     menu_selection = self.get_menu_input(menu_items, menu_color)    
     
@@ -192,16 +215,41 @@ class MainMenu:
   def monthly_activity_calendar(self):
     # Display the activity calendar menu
     menu_color = "CYAN"
-    self.display_header("📅 ", "Activity Calendar", menu_color, "        ")    
-    menu_items = ["Calorie Log            ", "Exercise Log            ", "Main Menu           "]
+    self.display_header("📅 ", "Calendar", menu_color, "        ")    
+    menu_items = ["Days with Meals          ", "Days with Workouts       ", "Days with Meal & Workout ", "Main Menu                "]
     menu_selection = self.get_menu_input(menu_items, menu_color)    
     
     # Handle menu selection
     if(menu_selection == 1):
-      print("Only Meals")
+      while True:
+        # Get the selected date
+        target_year, target_month, target_day, exit_flag = QueryData().get_date()  
+        
+        # Return to main menu
+        if(exit_flag):
+          return 0
+        
+        Calendar().meals_by_month(target_year, target_month)
     elif(menu_selection == 2):
-      print("Only Exercises")  
+      while True:
+        # Get the selected date
+        target_year, target_month, target_day, exit_flag = QueryData().get_date()  
+        
+        # Return to main menu
+        if(exit_flag):
+          return 0
+        
+        Calendar().workouts_by_month(target_year, target_month)  
     elif(menu_selection == 3):
-      print("Meals and Exercises") 
+      while True:
+        # Get the selected date
+        target_year, target_month, target_day, exit_flag = QueryData().get_date()  
+        
+        # Return to main menu
+        if(exit_flag):
+          return 0
+        
+        Calendar().activities_by_month(target_year, target_month)
+        
     else:
       return self.exit_to_main_menu(menu_selection)
