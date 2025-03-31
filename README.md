@@ -9,7 +9,9 @@ the command line, challenges and future enhancements.
 
 
 ### Architectural Diagram:
-<img width="503" alt="image" src="https://github.com/user-attachments/assets/8a9b069b-9415-48e8-a077-01ba6c0a6f4f" />
+<p align="center">
+  <img width="503" alt="image" src="https://github.com/user-attachments/assets/8a9b069b-9415-48e8-a077-01ba6c0a6f4f" />
+</p>
 
 
 Runs from the command-line on Linux/Ubuntu. Must not be a web app, and it does not
