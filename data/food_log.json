@@ -36,13 +36,6 @@
   },
   {
     "date": "2020-10-10",
-    "name": "Apricot",
-    "calories": 374,
-    "grams": 770,
-    "serving_size": 22
-  },
-  {
-    "date": "2020-10-10",
     "name": "Bread",
     "calories": 790,
     "grams": 300,
@@ -68,5 +61,12 @@
     "calories": 5000,
     "grams": 12200,
     "serving_size": 200
+  },
+  {
+    "date": "2020-10-10",
+    "name": "Pork (Tenderloin)",
+    "calories": 2840,
+    "grams": 1700,
+    "serving_size": 20
   }
 ]
