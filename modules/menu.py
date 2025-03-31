@@ -2,7 +2,7 @@
 #  Authors: Suhas Sunder - 100548159
 #  Date: March 28, 2025
 #  Title: NutriFitCLI (NutriFit Command Line Interface)
-#  Description: Handles all menu UI logic & rendering
+#  Description: Handles all menu UI logic & rendering.
 
 import os
 from colour_sequence import ColorSequence
@@ -18,6 +18,7 @@ class MainMenu:
     self.border_text_2 = "-----------------------------------"
     self.color_text = ColorSequence().color_text
     
+  # Main menu header with embedded logo as title
   def display_header(self, emoji="   ", menu_text="", header_color="PURPLE", space_before_emoji="           "):
     os.system('cls' if os.name == 'nt' else 'clear')  # Clear the console
     header_text = "        " + self.title + "        "  
@@ -250,7 +251,6 @@ class MainMenu:
         if(exit_flag):
           return 0
         
-        Calendar().activities_by_month(target_year, target_month)
-        
+        Calendar().activities_by_month(target_year, target_month)        
     else:
       return self.exit_to_main_menu(menu_selection, 4)

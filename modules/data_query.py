@@ -2,7 +2,7 @@
 #  Authors: Suhas Sunder - 100548159
 #  Date: March 28, 2025
 #  Title: NutriFitCLI (NutriFit Command Line Interface)
-#  Description: Handles all logic with querying and displaying information about meals and exercises
+#  Description: Handles all logic with querying and displaying information about meals and exercises.
 
 import json # Importing json module
 import calendar # Importing calendar module

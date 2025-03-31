@@ -3,7 +3,7 @@
 #  Authors: Suhas Sunder - 100548159
 #  Date: March 28, 2025
 #  Title: NutriFitCLI (NutriFit Command Line Interface)
-#  Description: Handles all logic with applying colours and formatting to displayed text
+#  Description: Handles all logic with applying colours and formatting to displayed text.
 
 import json # Importing json module
 
