@@ -2,7 +2,7 @@
 #  Authors: Suhas Sunder - 100548159
 #  Date: March 28, 2025
 #  Title: NutriFitCLI (NutriFit Command Line Interface)
-#  Description: Handles all menu UI
+#  Description: Handles all menu UI logic & rendering
 
 import os
 from colour_sequence import color_text
@@ -31,9 +31,9 @@ class MainMenu:
     # Top menu border
     print(color_text(self.border_text_2, "DARK_" + header_color, True))
     
-  def exit_to_main_menu(self, menu_selection):
+  def exit_to_main_menu(self, menu_selection, exit_index=3):
     # Handle return to main menu or exit the program
-    if(menu_selection == 3):
+    if(menu_selection == exit_index):
       return 0;    
     return 7
         
@@ -119,10 +119,11 @@ class MainMenu:
         if(exit_flag):
           return 0
         
+        os.system('cls' if os.name == 'nt' else 'clear')
+        print(f"LIST OF MEALS LOGGED ON: {color_text(f"{target_year}-{target_month}-{target_day}", 'BRIGHT_YELLOW', True)}")
         # Display the calorie log for the selected date
-        QueryData().calories_burned_by_date(target_year, target_month, target_day) 
-
-        print("")
+        QueryData().meals_by_date(target_year, target_month, target_day) 
+        
         user_input = input(f"Press {color_text('any key', 'BRIGHT_YELLOW', True)} to search another day" + " ~ (or " + color_text("'menu'", "BRIGHT_YELLOW", True) + " for " + color_text("MAIN MENU", "BRIGHT_YELLOW", True) + "): ")
         if(user_input == 'menu'):
           return 0 
@@ -135,15 +136,36 @@ class MainMenu:
         if(exit_flag):
           return 0
         
+        os.system('cls' if os.name == 'nt' else 'clear')
+        print(f"LIST OF WORKOUTS LOGGED ON: {color_text(f"{target_year}-{target_month}-{target_day}", 'BRIGHT_YELLOW', True)}")
         # Display the calorie log for the selected date
-        QueryData().calories_burned_by_month(target_year, target_month) 
+        QueryData().exercises_by_date(target_year, target_month, target_day) 
         
-        print("")
-        user_input = input(f"Press {color_text('any key', 'BRIGHT_YELLOW', True)} to search another month" + " ~ (or " + color_text("'menu'", "BRIGHT_YELLOW", True) + " for " + color_text("MAIN MENU", "BRIGHT_YELLOW", True) + "): ")
+        user_input = input(f"Press {color_text('any key', 'BRIGHT_YELLOW', True)} to search another day" + " ~ (or " + color_text("'menu'", "BRIGHT_YELLOW", True) + " for " + color_text("MAIN MENU", "BRIGHT_YELLOW", True) + "): ")
+        if(user_input == 'menu'):
+          return 0 
+    elif(menu_selection == 3): 
+      while True:    
+        # Get the selected date
+        target_year, target_month, target_day, exit_flag = QueryData().get_date()  
+        
+        # Return to main menu
+        if(exit_flag):
+          return 0
+        
+        os.system('cls' if os.name == 'nt' else 'clear')
+        print(f"LIST OF MEALS LOGGED ON: {color_text(f"{target_year}-{target_month}-{target_day}", 'BRIGHT_YELLOW', True)}")
+        # Display the calorie log for the selected date
+        QueryData().meals_by_date(target_year, target_month, target_day)
+        print(f"LIST OF WORKOUTS LOGGED ON: {color_text(f"{target_year}-{target_month}-{target_day}", 'BRIGHT_YELLOW', True)}")
+        # Display the calorie log for the selected date
+        QueryData().exercises_by_date(target_year, target_month, target_day) 
+        
+        user_input = input(f"Press {color_text('any key', 'BRIGHT_YELLOW', True)} to search another day" + " ~ (or " + color_text("'menu'", "BRIGHT_YELLOW", True) + " for " + color_text("MAIN MENU", "BRIGHT_YELLOW", True) + "): ")
         if(user_input == 'menu'):
           return 0 
     else:
-      return self.exit_to_main_menu(menu_selection)
+      return self.exit_to_main_menu(menu_selection, 4)
              
   def total_calories_burned(self):
     # Display the total calories burned menu
