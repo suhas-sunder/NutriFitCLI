@@ -32,35 +32,35 @@ class MealTracker:
     keep_logging_meals = True
     
     while keep_logging_meals:
-        # Prompt the user to enter a food name
-        print("")
-        entered_food = input("Enter " + color_text("food name", "BRIGHT_YELLOW", True)  + " ~ (or " + color_text("'menu'", "BRIGHT_YELLOW", True) + " for " + color_text("MAIN MENU", "BRIGHT_YELLOW", True) + "): ")          
-        if(entered_food.lower() == "menu"):
-            break
+      # Prompt the user to enter a food name
+      print("")
+      entered_food = input("Enter " + color_text("food name", "BRIGHT_YELLOW", True)  + " ~ (or " + color_text("'menu'", "BRIGHT_YELLOW", True) + " for " + color_text("MAIN MENU", "BRIGHT_YELLOW", True) + "): ")          
+      if(entered_food.lower() == "menu"):
+          break
         
-        # Check if food exists in the list      
-        nutrition_data = self.food_search(entered_food)
+      # Check if food exists in the list      
+      nutrition_data = self.food_search(entered_food)
         
-        # If the food is not found, display an error message
-        if(len(nutrition_data) == 0):
-            print(color_text("Meal not found! Please try again with a different name.", "BRIGHT_RED", True)) 
-        else:
-            # If the food is found, display a list of names and nutrition data
-            for index, food in enumerate(nutrition_data):
-                print(f"{index + 1}. {color_text(food["food_name"], "BRIGHT_ORANGE", True)} | " + color_text("Calories", "BRIGHT_PINK", True) + f" per serving: {color_text(food['calories_per_serving'], 'BRIGHT_PINK', True)} | " + color_text("Grams", "BRIGHT_CYAN", True) + f" per serving: {color_text(food['grams_per_serving'], 'BRIGHT_CYAN', True)}", )
+      # If the food is not found, display an error message
+      if(len(nutrition_data) == 0):
+          print(color_text("Meal not found! Please try again with a different name.", "BRIGHT_RED", True)) 
+      else:
+          # If the food is found, display a list of names and nutrition data
+          for index, food in enumerate(nutrition_data):
+              print(f"{index + 1}. {color_text(food["food_name"], "BRIGHT_ORANGE", True)} | " + color_text("Calories", "BRIGHT_PINK", True) + f" per serving: {color_text(food['calories_per_serving'], 'BRIGHT_PINK', True)} | " + color_text("Grams", "BRIGHT_CYAN", True) + f" per serving: {color_text(food['grams_per_serving'], 'BRIGHT_CYAN', True)}", )
                             
-            # Prompt the user to select a food from the list
-            print("")
-            food_selected = input("Enter" + color_text(" food", "BRIGHT_YELLOW", True) + " by " + color_text("#", "BRIGHT_YELLOW", True) + " (or " + color_text("'menu'", "BRIGHT_YELLOW", True) + " for " + color_text("MAIN MENU", "BRIGHT_YELLOW", True) + "): ")
+          # Prompt the user to select a food from the list
+          print("")
+          food_selected = input("Enter" + color_text(" food", "BRIGHT_YELLOW", True) + " by " + color_text("#", "BRIGHT_YELLOW", True) + " (or " + color_text("'menu'", "BRIGHT_YELLOW", True) + " for " + color_text("MAIN MENU", "BRIGHT_YELLOW", True) + "): ")
                         
-            if(food_selected == 'menu'):
-              break
+          if(food_selected == 'menu'):
+            break
                                
-            try:
-              food_selected = int(food_selected)
-              self.get_serving_size(nutrition_data, food_selected, target_year, target_month, target_day)             
-            except ValueError:
-              print(color_text("Invalid input! Please enter a number.", "BRIGHT_RED", True))                
+          try:
+            food_selected = int(food_selected)
+            self.get_serving_size(nutrition_data, food_selected, target_year, target_month, target_day)             
+          except ValueError:
+            print(color_text("Invalid input! Please enter a number.", "BRIGHT_RED", True))                
     return 0
   def food_search(self, entered_food):        
     matching_foods = []
@@ -180,9 +180,3 @@ class MealTracker:
           print(color_text("Invalid selection! Please enter a valid number.", "BRIGHT_RED", True))
       except ValueError:
         print(color_text("Invalid input! Please enter a number.", "BRIGHT_RED", True))
-      
- 
-           
-  
-  
-  

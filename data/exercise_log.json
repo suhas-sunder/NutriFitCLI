@@ -10,5 +10,11 @@
     "name": "Running (6 mph)",
     "calories_burned": 600,
     "minutes_exercised": 60
+  },
+  {
+    "date": "2020-10-10",
+    "name": "Running (5 mph)",
+    "calories_burned": 1600,
+    "minutes_exercised": 200
   }
 ]

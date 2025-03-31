@@ -12,5 +12,33 @@
     "calories": 76,
     "grams": 176,
     "serving_size": 2
+  },
+  {
+    "date": "2020-10-10",
+    "name": "Brussels Sprouts",
+    "calories": 760,
+    "grams": 1760,
+    "serving_size": 20
+  },
+  {
+    "date": "2025-4-1",
+    "name": "Egg",
+    "calories": 680,
+    "grams": 500,
+    "serving_size": 10
+  },
+  {
+    "date": "2020-10-10",
+    "name": "Carrot",
+    "calories": 500,
+    "grams": 1220,
+    "serving_size": 20
+  },
+  {
+    "date": "2020-10-10",
+    "name": "Apricot",
+    "calories": 374,
+    "grams": 770,
+    "serving_size": 22
   }
 ]
