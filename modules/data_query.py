@@ -114,6 +114,7 @@ class QueryData:
         overall_calories_consumed += calories_consumed
         total_overall_calories_burned += total_calories_burned
 
+    print("")
     print(color_text("MONTHLY CALORIES BURNED:", "BRIGHT_GREEN", True))
     print(f"Target Month: {color_text(target_year, 'BRIGHT_ORANGE', True)}-{color_text(target_month, 'BRIGHT_ORANGE', True)} | Monthly Calories Consumed: {color_text(overall_calories_consumed, 'BRIGHT_PURPLE', True)} | Monthly Calories Burned: {color_text(overall_calories_burned, 'BRIGHT_CYAN', True)} | {color_text('TOTAL MONTHLY CALORIES BURNED:', 'BRIGHT_GREEN', True)} {color_text(total_overall_calories_burned, 'BRIGHT_GREEN', True)}")
 

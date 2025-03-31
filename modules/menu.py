@@ -75,7 +75,7 @@ class MainMenu:
     # Display the food log menu
     menu_color = "CYAN"
     self.display_header("🍜 ", "Calorie", menu_color, "        ") 
-    menu_items = ["Add Meal             ", "Remove Meal            ", "Main Menu           "]
+    menu_items = ["Add Meal                 ", "Remove Meal              ", "Main Menu                "]
     menu_selection = self.get_menu_input(menu_items, menu_color)  
     
     # Handle menu selection
@@ -91,7 +91,7 @@ class MainMenu:
     menu_color = "ORANGE"
     self.display_header("👟 ", "Exercise", menu_color, "        ") 
     
-    menu_items = ["Add Exercise             ", "Remove Exercise            ", "Main Menu           "]
+    menu_items = ["Add Exercise             ", "Remove Exercise          ", "Main Menu                "]
     menu_selection = self.get_menu_input(menu_items, menu_color)  
     
     # Handle menu selection
@@ -105,7 +105,7 @@ class MainMenu:
   def search_by_date(self):
     # Display the search by date menu
     menu_color = "PURPLE"
-    self.display_header("🔍 ", "Search", menu_color, "        ")     
+    self.display_header(" 🔍 ", "Search", menu_color, "        ")     
     menu_items = ["Meals Logged By Date      ", "Workouts Logged By Date   ", "Meals & Workouts By Date  ", "Main Menu                 "]
     menu_selection = self.get_menu_input(menu_items, menu_color)    
     
@@ -170,7 +170,7 @@ class MainMenu:
   def total_calories_burned(self):
     # Display the total calories burned menu
     menu_color = "ORANGE"
-    self.display_header("🔥 ", "Calories Burned", menu_color, "        ")     
+    self.display_header("🔥 ", "Cals Burned", menu_color, "        ")     
     menu_items = ["Calories Burned By Date  ", "Calories Burned By Month ", "Main Menu                "]
     menu_selection = self.get_menu_input(menu_items, menu_color)    
     
@@ -214,8 +214,8 @@ class MainMenu:
   def monthly_activity_calendar(self):
     # Display the activity calendar menu
     menu_color = "CYAN"
-    self.display_header("📅 ", "Activity Calendar", menu_color, "        ")    
-    menu_items = ["Calorie Log            ", "Exercise Log            ", "Main Menu           "]
+    self.display_header("📅 ", "Calendar", menu_color, "        ")    
+    menu_items = ["Meals Logged             ", "Workouts Logged          ", "All Activity             ", "Main Menu                "]
     menu_selection = self.get_menu_input(menu_items, menu_color)    
     
     # Handle menu selection
