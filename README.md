@@ -11,7 +11,6 @@ This is a meal and exercise tracking application that allows users to add/remove
 <p align="center">
   <img width="600" alt="image" src="https://github.com/user-attachments/assets/8a9b069b-9415-48e8-a077-01ba6c0a6f4f" />
 </p>
-
 ### How to run this application:
 - Download the repo and save the folder in the appropriate directory or clone the repo using Git: [Git Clone](https://git-scm.com/docs/git-clone)
   ```sh
@@ -30,19 +29,16 @@ This is a meal and exercise tracking application that allows users to add/remove
   python3 main.py
   ```
   *(Replace `python3` with the appropriate Python version if needed.)*
-
 ### Challenges:
 - Handeling datetime conversions was tricky, especially when generating the calendar with appropriate dates.
 - I used a JSON data set instead of a free/demo API. OpenFoodFacts API returned poor results. API Ninjas worked well, but calorie data was hidden behind pay wall. FatSecret required Oauth2 setup which seemed unnecessairly complex.
 - I ended up with a lot of redundant code that can be better optimized given enough time.
-
 ### Future enhancements:
 - Can build out the application to be functional outside of a CLI for real world use cases. eg. Web or mobile application.
 - Interactive calendar, so that users can click on dates and navigate via calendar buttons or drop-downs instead of manually entering dates.
 - More intuitive navigation between menu and sections.
 - API integration & connection to a relational database (SQL, PostgreSQL, etc.)
 - More complex activity logging with graphs and other advanced features.
-
 ### Application Preview (Menu(s) & Calendar output)
 <table align="center">
   <tr>
@@ -56,7 +52,6 @@ This is a meal and exercise tracking application that allows users to add/remove
     <td><img width="200" src="https://github.com/user-attachments/assets/136aaa0a-c86f-4b36-8e9c-a86000901007" /></td>
   </tr>
 </table>
-
 ### Sample Output
 <p align="center">
  <img width="651" src="https://github.com/user-attachments/assets/5d918997-7bf3-4101-a3cc-0e0b9645630a" />
