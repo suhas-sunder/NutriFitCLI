@@ -5,6 +5,7 @@
 #  Description: Handles all logic related to adding and removing meal logs.
 
 import os # Importing os module
+# Importing relevant classes from the modules directory
 from data_query import QueryData
 from colour_sequence import ColorSequence
 

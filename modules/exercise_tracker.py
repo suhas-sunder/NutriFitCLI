@@ -6,6 +6,7 @@
 #  Description: Handles all logic related to adding and removing workout logs.
   
 import os # Importing os module
+# Importing relevant classes from the modules directory
 from colour_sequence import ColorSequence
 from data_query import QueryData
 
@@ -51,6 +52,7 @@ class ExerciseTracker:
               break
                                
             try:
+              # Prompt the user to enter the number of minutes exercised
               exercise_selected = int(exercise_selected)
               self.get_minutes_exercised(workout_data, exercise_selected, target_year, target_month, target_day)             
             except ValueError:

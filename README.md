@@ -30,7 +30,7 @@ This is a meal and exercise tracking application that allows users to add/remove
 - Can build out the application to be functional outside of a CLI for real world use cases. eg. Web or mobile application.
 - Interactive calendar, so that users can click on dates and navigate via calendar buttons or drop-downs instead of manually entering dates.
 - Complex activity logging with graphs and other advanced features. Also, more intuitive navigation between menu and sections.
-- API integration & connection to a relational database (SQL, PostgreSQL, etc.)
+- API integration & connection to a relational database (SQL, PostgreSQL, etc.) 
 
 ### Application Preview (Menu(s) & Calendar output)
 <table align="center">

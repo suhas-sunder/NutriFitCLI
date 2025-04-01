@@ -22,5 +22,65 @@
     "name": "Plank",
     "calories_burned": 60,
     "minutes_exercised": 20
+  },
+  {
+    "date": "2020-10-10",
+    "name": "Lunges",
+    "calories_burned": 180,
+    "minutes_exercised": 30
+  },
+  {
+    "date": "2020-10-22",
+    "name": "Swimming (Moderate)",
+    "calories_burned": 14,
+    "minutes_exercised": 2
+  },
+  {
+    "date": "2020-10-23",
+    "name": "Burpees",
+    "calories_burned": 100000,
+    "minutes_exercised": 10000
+  },
+  {
+    "date": "2020-10-23",
+    "name": "Jump Rope",
+    "calories_burned": 2400,
+    "minutes_exercised": 200
+  },
+  {
+    "date": "2020-10-23",
+    "name": "Lunges",
+    "calories_burned": 12000,
+    "minutes_exercised": 2000
+  },
+  {
+    "date": "2020-10-24",
+    "name": "Jump Rope",
+    "calories_burned": 36,
+    "minutes_exercised": 3
+  },
+  {
+    "date": "2020-10-25",
+    "name": "Skiing (Cross-Country)",
+    "calories_burned": 32,
+    "minutes_exercised": 4
+  },
+  {
+    "date": "2020-10-26",
+    "name": "Rowing (Moderate)",
+    "calories_burned": 12,
+    "minutes_exercised": 2
+  },
+  {
+    "date": "2020-10-27",
+    "name": "Jump Rope",
+    "calories_burned": 24,
+    "minutes_exercised": 2
+  },
+  {
+    "date": "2020-10-28",
+    "name": "Rowing (Moderate)",
+    "calories_burned": 12,
+    "minutes_exercised": 2
   }
 ]
