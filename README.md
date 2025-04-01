@@ -20,7 +20,7 @@ This is a meal and exercise tracking application that allows users to add/remove
 - Download the repo and save the folder in the appropriate directory or clone the repo using `git clone <repository-url>`: [Git Clone](https://git-scm.com/docs/git-clone)
 - Open Ubuntu/Linux terminal and navigate to the directory with the downloaded folder `cd path/to/repo`
 - Type `./main.py` in the command line to run the program
-- If `./main.py` does not work, try running it with Python explicitly `python3 main.py` ~ *(Replace `python3` with your Python version as needed.)
+- If `./main.py` does not work, try running it with Python explicitly `python3 main.py` ~ *(Replace `python3` with your Python version as needed.)*
   
 ### Challenges:
 - Handeling datetime conversions was tricky, especially when generating the calendar with appropriate dates.
