@@ -82,5 +82,23 @@
     "name": "Rowing (Moderate)",
     "calories_burned": 12,
     "minutes_exercised": 2
+  },
+  {
+    "date": "2010-10-10",
+    "name": "Cycling (Moderate)",
+    "calories_burned": 210,
+    "minutes_exercised": 30
+  },
+  {
+    "date": "2020-10-10",
+    "name": "Lunges",
+    "calories_burned": 360,
+    "minutes_exercised": 60
+  },
+  {
+    "date": "2020-10-10",
+    "name": "Walking (3 mph)",
+    "calories_burned": 120,
+    "minutes_exercised": 30
   }
 ]
