@@ -35,9 +35,9 @@ This is a meal and exercise tracking application that allows users to add/remove
   ```
   *(Replace `python3` with the appropriate Python version if needed.)*
 
-
-
 ### Challenges:
+- Handeling datetime conversions was tricky, especially when generating the calendar with appropriate dates.
+- I used a JSON data set instead of a free/demo API. OpenFoodFacts API returned poor results. API Ninjas worked well, but calorie data was hidden behind pay wall. FatSecret required Oauth2 setup which seemed unnecessairly complex.
 
 ### Future enhancements:
 
