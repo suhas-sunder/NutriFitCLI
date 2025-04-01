@@ -36,9 +36,7 @@ This is a meal and exercise tracking application that allows users to add/remove
   </tr>
 </table>
 
-### **Example Output**
-<p align="center">>
+### Sample Output
+<p align="center">
  <img width="651" src="https://github.com/user-attachments/assets/5d918997-7bf3-4101-a3cc-0e0b9645630a" />
 </p
-
-
