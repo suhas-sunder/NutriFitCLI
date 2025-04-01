@@ -153,9 +153,11 @@ class QueryData:
     # Load ANSI color codes from a JSON file
     with open('data/food_log.json') as file:
         food_log = json.load(file)
-        
+    
+    # Create a date string in the format "YYYY-MM-DD"
     date = f"{target_year}-{target_month}-{target_day}"
     
+    # Filter items that match the target date
     meals_logged = self.extract_data_by_date(date, food_log)
     
     if(print_meals):
@@ -167,9 +169,11 @@ class QueryData:
     # Load ANSI color codes from a JSON file
     with open('data/exercise_log.json') as file:
         exercise_log = json.load(file) 
-        
+    
+    # Create a date string in the format "YYYY-MM-DD"
     date = f"{target_year}-{target_month}-{target_day}"
     
+    # Filter items that match the target date
     exercises_logged = self.extract_data_by_date(date, exercise_log)
     
     if(print_exercises):
@@ -196,6 +200,7 @@ class QueryData:
     calories_burned = 0
     total_calories_burned = 0    
     
+    # Check if there are any meals or exercises logged and display the total calories burned
     if(len(meals_logged) != 0 or len(exercises_logged) != 0):
       calories_consumed = sum(int(meal["calories"]) for meal in meals_logged)
     
@@ -213,6 +218,7 @@ class QueryData:
     overall_calories_consumed = 0
     total_overall_calories_burned = 0
 
+    # Loop through each day in the month and display the total calories burned
     print(self.color_text("DAILY CALORIES BURNED:", "BRIGHT_GREEN", True))
     for day in range(1, total_days + 1):
         calories_consumed, calories_burned, total_calories_burned = self.calories_burned_by_date(target_year, target_month, day)  # Call function for each day

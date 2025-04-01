@@ -68,5 +68,145 @@
     "calories": 2840,
     "grams": 1700,
     "serving_size": 20
+  },
+  {
+    "date": "2020-10-1",
+    "name": "Milk (Whole)",
+    "calories": 2920,
+    "grams": 4880,
+    "serving_size": 20
+  },
+  {
+    "date": "2020-10-4",
+    "name": "Chicken Breast",
+    "calories": 3300,
+    "grams": 3480,
+    "serving_size": 20
+  },
+  {
+    "date": "2020-10-8",
+    "name": "Basil",
+    "calories": 20,
+    "grams": 40,
+    "serving_size": 20
+  },
+  {
+    "date": "2020-10-15",
+    "name": "Carrot",
+    "calories": 500,
+    "grams": 1220,
+    "serving_size": 20
+  },
+  {
+    "date": "2020-10-20",
+    "name": "Fish Sandwich",
+    "calories": 7600,
+    "grams": 3600,
+    "serving_size": 20
+  },
+  {
+    "date": "2020-10-24",
+    "name": "Beef (Ground)",
+    "calories": 5000,
+    "grams": 1700,
+    "serving_size": 20
+  },
+  {
+    "date": "2020-10-28",
+    "name": "Barley",
+    "calories": 3860,
+    "grams": 3140,
+    "serving_size": 20
+  },
+  {
+    "date": "2020-10-31",
+    "name": "Chicken Wings (6 pieces)",
+    "calories": 3440,
+    "grams": 1200,
+    "serving_size": 8
+  },
+  {
+    "date": "2020-10-4",
+    "name": "Apple Cider",
+    "calories": 2400,
+    "grams": 4800,
+    "serving_size": 20
+  },
+  {
+    "date": "2020-10-4",
+    "name": "Fish Sandwich",
+    "calories": 7600,
+    "grams": 3600,
+    "serving_size": 20
+  },
+  {
+    "date": "2020-10-5",
+    "name": "Apple Pie",
+    "calories": 5920,
+    "grams": 2500,
+    "serving_size": 20
+  },
+  {
+    "date": "2020-10-4",
+    "name": "Carrot",
+    "calories": 500,
+    "grams": 1220,
+    "serving_size": 20
+  },
+  {
+    "date": "2020-10-19",
+    "name": "Apple Pie",
+    "calories": 592,
+    "grams": 250,
+    "serving_size": 2
+  },
+  {
+    "date": "2020-10-23",
+    "name": "Fried Chicken (2 pieces)",
+    "calories": 800,
+    "grams": 300,
+    "serving_size": 2
+  },
+  {
+    "date": "2020-10-24",
+    "name": "Apple Pie",
+    "calories": 592,
+    "grams": 250,
+    "serving_size": 2
+  },
+  {
+    "date": "2020-10-26",
+    "name": "Chickpeas",
+    "calories": 538,
+    "grams": 328,
+    "serving_size": 2
+  },
+  {
+    "date": "2020-10-27",
+    "name": "Applesauce",
+    "calories": 200,
+    "grams": 488,
+    "serving_size": 2
+  },
+  {
+    "date": "2020-10-22",
+    "name": "Applesauce",
+    "calories": 200,
+    "grams": 488,
+    "serving_size": 2
+  },
+  {
+    "date": "2020-10-25",
+    "name": "Apple Pie",
+    "calories": 1184,
+    "grams": 500,
+    "serving_size": 4
+  },
+  {
+    "date": "2020-10-14",
+    "name": "Cheddar Cheese",
+    "calories": 226,
+    "grams": 56,
+    "serving_size": 2
   }
 ]
