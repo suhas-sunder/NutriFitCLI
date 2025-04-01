@@ -1,6 +1,6 @@
 # NutriFitCLI (Nutirition Fitness CLI)
 
-## Description
+### Description
 This is a meal and exercise tracking application that allows users to add/remove meal logs, add/remove exercise logs, view logs by date, view calories burned by day/month, preview a monthly visual calendar for logged activities.
 
 ### Additional info:
