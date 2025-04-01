@@ -4,7 +4,8 @@
 #  Title: NutriFitCLI (NutriFit Command Line Interface)
 #  Description: Handles all menu UI logic & rendering.
 
-import os
+import os # Importing os module
+# Importing relevant classes from the modules directory
 from colour_sequence import ColorSequence
 from modules.meal_tracker import MealTracker
 from modules.exercise_tracker import ExerciseTracker

@@ -5,7 +5,7 @@
 #  Description: Displays calendar UI to visualize meal and exercise logs.
 
 import os # Importing os module
-import re
+# Importing relevant classes from the modules directory
 from datetime import datetime, timedelta # Importing datetime module
 from colour_sequence import ColorSequence
 from data_query import QueryData
@@ -79,6 +79,7 @@ class Calendar:
     for i, date in enumerate(days_of_month):      
       date_obj = datetime.strptime(date, "%Y-%m-%d")  # Convert string to datetime
       
+      # Check if the current date is in the list of dates to highlight
       if date in dates_to_highlight:    
         days_of_month[i] = self.color_text(date_obj.strftime("%d"), highlight_color, True)
       else:
@@ -111,4 +112,5 @@ class Calendar:
     
     print("")
     
-    user_input = input(f"Press {self.color_text('any key', 'BRIGHT_YELLOW', True)} to {self.color_text('continue', 'BRIGHT_YELLOW', True)}: ")
+    # Prompt user to continue so that they can see the calendar
+    input(f"Press {self.color_text('any key', 'BRIGHT_YELLOW', True)} to {self.color_text('continue', 'BRIGHT_YELLOW', True)}: ")
