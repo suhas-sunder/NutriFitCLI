@@ -35,7 +35,7 @@ This is a meal and exercise tracking application that allows users to add/remove
 ### Application Preview (Menu(s) & Calendar output)
 <table align="center">
   <tr>
-    <td><img width="200" src="[https://github.com/user-attachments/assets/950d9643-31c1-463e-b579-94d7e94cde68](https://github.com/suhas-sunder/NutriFitCLI/blob/main/428762757-950d9643-31c1-463e-b579-94d7e94cde68.png)" /></td>
+    <td>[<img width="200" src="[https://github.com/user-attachments/assets/950d9643-31c1-463e-b579-94d7e94cde68]()" />](https://github.com/suhas-sunder/NutriFitCLI/blob/main/428762757-950d9643-31c1-463e-b579-94d7e94cde68.png)</td>
     <td><img width="200" alt="image" src="https://github.com/user-attachments/assets/965dd0d2-94df-4fa8-aaae-bb947fbf57ca" /></td>
     <td><img width="200" src="https://github.com/user-attachments/assets/b081d3fb-a0db-4541-b2ab-523d678bbfaa" /></td>
   </tr>
