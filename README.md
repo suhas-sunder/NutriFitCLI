@@ -36,17 +36,17 @@ This is a meal and exercise tracking application that allows users to add/remove
 <table align="center">
   <tr>
     <td><img width="200" alt="image" src="https://res.cloudinary.com/dhoowagsc/image/upload/v1743569956/428762757-950d9643-31c1-463e-b579-94d7e94cde68_wfmdhv.png" /></td>
-    <td><img width="200" alt="image" src="https://github.com/user-attachments/assets/965dd0d2-94df-4fa8-aaae-bb947fbf57ca.png" /></td>
-    <td><img width="200" src="https://github.com/user-attachments/assets/b081d3fb-a0db-4541-b2ab-523d678bbfaa.png" /></td>
+    <td><img width="200" alt="image" src="https://res.cloudinary.com/dhoowagsc/image/upload/v1743570202/428765694-965dd0d2-94df-4fa8-aaae-bb947fbf57ca_w278is.png" /></td>
+    <td><img width="200" src="https://res.cloudinary.com/dhoowagsc/image/upload/v1743570297/428763397-e86d4ed1-6526-4439-a684-b0ddd442487e_ejvgrd.png" /></td>
   </tr>
   <tr>
-    <td><img width="200" src="https://github.com/user-attachments/assets/3c18a192-01b8-44d4-8bd1-df33dd5eddea.png" /></td>
-    <td><img width="200" src="https://github.com/user-attachments/assets/e86d4ed1-6526-4439-a684-b0ddd442487e.png" /></td>
-    <td><img width="200" src="https://github.com/user-attachments/assets/136aaa0a-c86f-4b36-8e9c-a86000901007.png" /></td>
+    <td><img width="200" src="https://res.cloudinary.com/dhoowagsc/image/upload/v1743570203/428763119-3c18a192-01b8-44d4-8bd1-df33dd5eddea_ljumhw.png" /></td>
+    <td><img width="200" src="https://res.cloudinary.com/dhoowagsc/image/upload/v1743570202/428763030-b081d3fb-a0db-4541-b2ab-523d678bbfaa_pabq1x.png" /></td>
+    <td><img width="200" src="https://res.cloudinary.com/dhoowagsc/image/upload/v1743570202/428763452-136aaa0a-c86f-4b36-8e9c-a86000901007_ocbv3y.png" /></td>
   </tr>
 </table>
 
 ### Sample Output
 <p align="center">
- <img width="651" src="https://github.com/user-attachments/assets/5d918997-7bf3-4101-a3cc-0e0b9645630a" />
+ <img width="651" src="https://res.cloudinary.com/dhoowagsc/image/upload/v1743570202/428763251-5d918997-7bf3-4101-a3cc-0e0b9645630a_fcrakm.png" />
 </p
