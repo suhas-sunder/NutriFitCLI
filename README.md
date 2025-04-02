@@ -35,14 +35,14 @@ This is a meal and exercise tracking application that allows users to add/remove
 ### Application Preview (Menu(s) & Calendar output)
 <table align="center">
   <tr>
-    <td>[<img width="200" src="https://github.com/user-attachments/assets/950d9643-31c1-463e-b579-94d7e94cde68"</td>
-    <td><img width="200" alt="image" src="https://github.com/user-attachments/assets/965dd0d2-94df-4fa8-aaae-bb947fbf57ca" /></td>
-    <td><img width="200" src="https://github.com/user-attachments/assets/b081d3fb-a0db-4541-b2ab-523d678bbfaa" /></td>
+    <td>[<img width="200" src="https://github.com/user-attachments/assets/950d9643-31c1-463e-b579-94d7e94cde68.png"</td>
+    <td><img width="200" alt="image" src="https://github.com/user-attachments/assets/965dd0d2-94df-4fa8-aaae-bb947fbf57ca.png" /></td>
+    <td><img width="200" src="https://github.com/user-attachments/assets/b081d3fb-a0db-4541-b2ab-523d678bbfaa.png" /></td>
   </tr>
   <tr>
-    <td><img width="200" src="https://github.com/user-attachments/assets/3c18a192-01b8-44d4-8bd1-df33dd5eddea" /></td>
-    <td><img width="200" src="https://github.com/user-attachments/assets/e86d4ed1-6526-4439-a684-b0ddd442487e" /></td>
-    <td><img width="200" src="https://github.com/user-attachments/assets/136aaa0a-c86f-4b36-8e9c-a86000901007" /></td>
+    <td><img width="200" src="https://github.com/user-attachments/assets/3c18a192-01b8-44d4-8bd1-df33dd5eddea.png" /></td>
+    <td><img width="200" src="https://github.com/user-attachments/assets/e86d4ed1-6526-4439-a684-b0ddd442487e.png" /></td>
+    <td><img width="200" src="https://github.com/user-attachments/assets/136aaa0a-c86f-4b36-8e9c-a86000901007.png" /></td>
   </tr>
 </table>
 
